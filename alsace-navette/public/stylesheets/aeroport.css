@@ -1,0 +1,9 @@
+h1 {
+    text-decoration: underline;
+}
+
+.img-top-body {
+    padding: 10px;
+    border: 10px dotted;
+    border-color: #fcdd10;
+}
