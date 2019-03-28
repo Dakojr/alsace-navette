@@ -31,6 +31,8 @@ class Trajet
     public function __construct()
     {
         $this->reservations = new ArrayCollection();
+        $this->dateTrajet = new \DateTime();
+
     }
 
     public function getId(): ?int

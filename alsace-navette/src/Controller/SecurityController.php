@@ -28,6 +28,7 @@ class SecurityController extends AbstractController
         
         $form->handleRequest($request);
         if ($form->isSubmitted() && $form->isValid()){
+            dump($user->getPassword());
             $hash = $encoder->encodePassword($user, $user->getPassword());
             $user->setPassword($hash);
             $manager->persist($user);
@@ -47,7 +48,7 @@ class SecurityController extends AbstractController
         $lastUsername = $authenticationUtils->getLastUsername();
         $formLogin = $this->get('form.factory')
                     ->createNamedBuilder(null)
-                    ->add('_email', TextType::class, ['label' => 'Email'])
+                    ->add('_username', TextType::class, ['label' => 'Email'])
                     ->add('_password', PasswordType::class, ['label' => 'Pasword'])
                     ->add('submit', SubmitType::class, ['label' => 'Submit', 'attr' => ['class' => 'btn-primary btn-block']])
                     ->getForm();

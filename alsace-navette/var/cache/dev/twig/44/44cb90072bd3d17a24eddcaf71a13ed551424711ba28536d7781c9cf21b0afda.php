@@ -110,11 +110,10 @@ class __TwigTemplate_760df47fe4741224cc442a47a2f693656fa4125067be340b07fdba38c7d
         </div>
     </nav>
 
-
     ";
-        // line 62
+        // line 61
         $this->displayBlock('body', $context, $blocks);
-        // line 64
+        // line 63
         echo "    <footer class=\"container py-5\">
         <div class=\"row\">
             <div class=\"col-12 col-md\">
@@ -342,9 +341,9 @@ class __TwigTemplate_760df47fe4741224cc442a47a2f693656fa4125067be340b07fdba38c7d
         </div>
     </div>
     ";
-        // line 290
+        // line 289
         $this->displayBlock('javascripts', $context, $blocks);
-        // line 295
+        // line 294
         echo "
     <script src=\"https://code.jquery.com/jquery-3.2.1.slim.min.js\"
         integrity=\"sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN\"
@@ -420,7 +419,7 @@ class __TwigTemplate_760df47fe4741224cc442a47a2f693656fa4125067be340b07fdba38c7d
 
     }
 
-    // line 62
+    // line 61
     public function block_body($context, array $blocks = [])
     {
         $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e = $this->extensions["Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension"];
@@ -429,7 +428,7 @@ class __TwigTemplate_760df47fe4741224cc442a47a2f693656fa4125067be340b07fdba38c7d
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "body"));
 
-        // line 63
+        // line 62
         echo "    ";
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
@@ -439,7 +438,7 @@ class __TwigTemplate_760df47fe4741224cc442a47a2f693656fa4125067be340b07fdba38c7d
 
     }
 
-    // line 290
+    // line 289
     public function block_javascripts($context, array $blocks = [])
     {
         $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e = $this->extensions["Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension"];
@@ -448,7 +447,7 @@ class __TwigTemplate_760df47fe4741224cc442a47a2f693656fa4125067be340b07fdba38c7d
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "javascripts"));
 
-        // line 291
+        // line 290
         echo "
     <script src=\"javascript/inscription.js\"></script>
 
@@ -468,7 +467,7 @@ class __TwigTemplate_760df47fe4741224cc442a47a2f693656fa4125067be340b07fdba38c7d
 
     public function getDebugInfo()
     {
-        return array (  452 => 291,  443 => 290,  433 => 63,  424 => 62,  413 => 18,  404 => 17,  386 => 7,  369 => 5,  348 => 295,  346 => 290,  118 => 64,  116 => 62,  72 => 20,  70 => 17,  57 => 7,  54 => 6,  52 => 5,  46 => 1,);
+        return array (  451 => 290,  442 => 289,  432 => 62,  423 => 61,  412 => 18,  403 => 17,  385 => 7,  368 => 5,  347 => 294,  345 => 289,  117 => 63,  115 => 61,  72 => 20,  70 => 17,  57 => 7,  54 => 6,  52 => 5,  46 => 1,);
     }
 
     public function getSourceContext()
@@ -532,7 +531,6 @@ class __TwigTemplate_760df47fe4741224cc442a47a2f693656fa4125067be340b07fdba38c7d
             </ul>
         </div>
     </nav>
-
 
     {% block body %}
     {% endblock %}

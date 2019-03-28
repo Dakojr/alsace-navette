@@ -32,6 +32,10 @@ class Message
      */
     private $user;
 
+    public function __construct(){
+        $this->dateMessage =  new \DateTime();
+    }
+    
     public function getId(): ?int
     {
         return $this->id;
