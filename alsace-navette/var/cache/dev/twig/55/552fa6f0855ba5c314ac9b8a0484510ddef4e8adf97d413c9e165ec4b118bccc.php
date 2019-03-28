@@ -331,7 +331,7 @@ class __TwigTemplate_736e632945d8cb0df8b5730309410a1ee82171209e8e43cb5033059c05d
                     </div>
 
 
-                    <a href=\"#\" data-toggle=\"modal\" data-target=\"#connexionModal\"><label style=\"cursor: pointer;\" for=\"\"
+                    <a href=\"#\" data-toggle=\"modal\" data-dismiss=\"modal\" data-target=\"#connexionModal\"><label style=\"cursor: pointer;\" for=\"\"
                             class=\"text-center col-12 mt-2\">Connexion</label></a>
                 </div>
                 <div class=\"modal-footer\">
@@ -752,7 +752,7 @@ class __TwigTemplate_736e632945d8cb0df8b5730309410a1ee82171209e8e43cb5033059c05d
                     </div>
 
 
-                    <a href=\"#\" data-toggle=\"modal\" data-target=\"#connexionModal\"><label style=\"cursor: pointer;\" for=\"\"
+                    <a href=\"#\" data-toggle=\"modal\" data-dismiss=\"modal\" data-target=\"#connexionModal\"><label style=\"cursor: pointer;\" for=\"\"
                             class=\"text-center col-12 mt-2\">Connexion</label></a>
                 </div>
                 <div class=\"modal-footer\">
