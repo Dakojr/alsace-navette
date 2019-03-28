@@ -184,8 +184,7 @@
                     <div class="d-flex justify-content-around">
                         <div>
                             <label for="nom" class="text-center col-12 mt-2">Nom</label>
-                            <input type="text" id="nom" class="form-control" placeholder="Nom..." name="nom" required
-                                autofocus>
+                            <input type="text" id="nom" class="form-control" placeholder="Nom..." name="nom" required>
                             <div class="invalid-feedback">
                                 Veuillez renseigné un nom.
                             </div>
@@ -193,7 +192,7 @@
                         <div>
                             <label for="prenom" class="text-center col-12 mt-2">Prénom</label>
                             <input type="text" id="prenom" class="form-control" placeholder="Prénom..." name="prenom"
-                                required autofocus>
+                                required>
                             <div class="invalid-feedback">
                                 Veuillez renseigné un prénom.
                             </div>
@@ -202,8 +201,7 @@
                     <div class="d-flex justify-content-center">
                         <div>
                             <label for="email" class="text-center col-12 mt-2">E-mail</label>
-                            <input type="email" id="inputEmail" class="form-control" placeholder="E-mail..." required
-                                autofocus>
+                            <input type="email" id="inputEmail" class="form-control" placeholder="E-mail..." required>
                             <div class="invalid-feedback">
                                 Veuillez renseigné un e-mail.
                             </div>
@@ -213,7 +211,7 @@
                         <div>
                             <label for="password" class="text-center col-12 mt-2">Mot de Passe</label>
                             <input type="password" id="inputPassword" class="form-control" placeholder="Mot de passe..."
-                                required autofocus>
+                                required>
                             <div class="invalid-feedback">
                                 Veuillez renseigné un mot de passe.
                             </div>
@@ -223,7 +221,7 @@
                         <div>
                             <label for="password" class="text-center col-12 mt-2">Confirmaton</label>
                             <input type="password" id="inputPassword" class="form-control" placeholder="Mot de passe..."
-                                required autofocus>
+                                required>
                             <div class="invalid-feedback">
                                 Veuillez renseigné un mot de passe.
                             </div>
@@ -233,7 +231,7 @@
                         <div>
                             <label for="cp" class="text-center col-12 mt-2">Code Postal</label>
                             <input type="text" id="cp" class="form-control" placeholder="Code postal..." name="cp"
-                                required autofocus>
+                                required>
                             <div class="invalid-feedback">
                                 Veuillez renseigné un code postal.
                             </div>
@@ -241,7 +239,7 @@
                         <div>
                             <label for="ville" class="text-center col-12 mt-2">Ville</label>
                             <input type="text" id="ville" class="form-control" placeholder="Ville..." name="ville"
-                                required autofocus>
+                                required>
                             <div class="invalid-feedback">
                                 Veuillez renseigné une ville.
                             </div>
@@ -251,12 +249,34 @@
                         <div>
                             <label for="telephone" class="text-center col-12 mt-2">Telephone</label>
                             <input type="tel" id="telephone" class="form-control" placeholder="telephone..."
-                                name="telephone" required autofocus>
+                                name="telephone" required>
                             <div class="invalid-feedback">
                                 Veuillez renseigné un numéro de téléphone.
                             </div>
                         </div>
                     </div>
+                    <div class="d-flex justify-content-center">
+                        <div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="CheckPro"
+                                    onclick="Prochecked()">
+                                <label class="form-check-label" for="CheckPro">
+                                    Professionel ?
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="d-flex justify-content-center">
+                        <div style="display:none" id="InputPro">
+                            <label for="telephone" class="text-center col-12 mt-2">Nom de la société</label>
+                            <input type="text" class="form-control" placeholder="telephone..." name="telephone">
+                            <div class="invalid-feedback">
+                                Veuillez renseigné un nom de société
+                            </div>
+                        </div>
+                    </div>
+
+
                     <a href="#" data-toggle="modal" data-target="#connexionModal"><label style="cursor: pointer;" for=""
                             class="text-center col-12 mt-2">Connexion</label></a>
                 </div>
@@ -282,7 +302,11 @@
     si oui => nom de la société
 
 
-    {% block javascripts %}{% endblock %}
+    {% block javascripts %}
+
+    <script src="javascript/inscription.js"></script>
+
+    {% endblock %}
 
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
         integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
