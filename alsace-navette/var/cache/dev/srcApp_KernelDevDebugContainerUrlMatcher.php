@@ -23,6 +23,9 @@ class srcApp_KernelDevDebugContainerUrlMatcher extends Symfony\Bundle\FrameworkB
             '/' => [[['_route' => 'home', '_controller' => 'App\\Controller\\HomeController::homeRoute'], null, null, null, false, false, null]],
             '/aeroport' => [[['_route' => 'aeroport', '_controller' => 'App\\Controller\\HomeController::aeroportRoute'], null, null, null, false, false, null]],
             '/horairesTarifs' => [[['_route' => 'horairesTarifs', '_controller' => 'App\\Controller\\HomeController::aeroportRouteHorairesTarifs'], null, null, null, false, false, null]],
+            '/registration' => [[['_route' => 'security_registration', '_controller' => 'App\\Controller\\SecurityController::registration'], null, null, null, false, false, null]],
+            '/login' => [[['_route' => 'security_login', '_controller' => 'App\\Controller\\SecurityController::login'], null, null, null, false, false, null]],
+            '/logout' => [[['_route' => 'security_logout', '_controller' => 'App\\Controller\\SecurityController::logout'], null, null, null, false, false, null]],
         ];
         $this->regexpList = [
             0 => '{^(?'

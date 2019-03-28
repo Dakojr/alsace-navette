@@ -35,6 +35,9 @@ class srcApp_KernelDevDebugContainerUrlGenerator extends Symfony\Component\Routi
         'home' => [[], ['_controller' => 'App\\Controller\\HomeController::homeRoute'], [], [['text', '/']], [], []],
         'aeroport' => [[], ['_controller' => 'App\\Controller\\HomeController::aeroportRoute'], [], [['text', '/aeroport']], [], []],
         'horairesTarifs' => [[], ['_controller' => 'App\\Controller\\HomeController::aeroportRouteHorairesTarifs'], [], [['text', '/horairesTarifs']], [], []],
+        'security_registration' => [[], ['_controller' => 'App\\Controller\\SecurityController::registration'], [], [['text', '/registration']], [], []],
+        'security_login' => [[], ['_controller' => 'App\\Controller\\SecurityController::login'], [], [['text', '/login']], [], []],
+        'security_logout' => [[], ['_controller' => 'App\\Controller\\SecurityController::logout'], [], [['text', '/logout']], [], []],
     ];
         }
     }

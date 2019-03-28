@@ -69,7 +69,7 @@ class __TwigTemplate_736e632945d8cb0df8b5730309410a1ee82171209e8e43cb5033059c05d
         // line 17
         $this->displayBlock('stylesheets', $context, $blocks);
         // line 20
-        echo "
+        echo "    
 </head>
 
 <body>
@@ -331,6 +331,12 @@ class __TwigTemplate_736e632945d8cb0df8b5730309410a1ee82171209e8e43cb5033059c05d
                     </div>
 
 
+                    ";
+        // line 280
+        $this->loadTemplate("security/registration.html.twig", "base.html.twig", 280)->display($context);
+        // line 281
+        echo "
+
                     <a href=\"#\" data-toggle=\"modal\" data-dismiss=\"modal\" data-target=\"#connexionModal\"><label style=\"cursor: pointer;\" for=\"\"
                             class=\"text-center col-12 mt-2\">Connexion</label></a>
                 </div>
@@ -342,9 +348,9 @@ class __TwigTemplate_736e632945d8cb0df8b5730309410a1ee82171209e8e43cb5033059c05d
         </div>
     </div>
     ";
-        // line 290
+        // line 293
         $this->displayBlock('javascripts', $context, $blocks);
-        // line 295
+        // line 298
         echo "
     <script src=\"https://code.jquery.com/jquery-3.2.1.slim.min.js\"
         integrity=\"sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN\"
@@ -439,7 +445,7 @@ class __TwigTemplate_736e632945d8cb0df8b5730309410a1ee82171209e8e43cb5033059c05d
 
     }
 
-    // line 290
+    // line 293
     public function block_javascripts($context, array $blocks = [])
     {
         $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e = $this->extensions["Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension"];
@@ -448,7 +454,7 @@ class __TwigTemplate_736e632945d8cb0df8b5730309410a1ee82171209e8e43cb5033059c05d
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "javascripts"));
 
-        // line 291
+        // line 294
         echo "
     <script src=\"javascript/inscription.js\"></script>
 
@@ -466,9 +472,14 @@ class __TwigTemplate_736e632945d8cb0df8b5730309410a1ee82171209e8e43cb5033059c05d
         return "base.html.twig";
     }
 
+    public function isTraitable()
+    {
+        return false;
+    }
+
     public function getDebugInfo()
     {
-        return array (  452 => 291,  443 => 290,  433 => 63,  424 => 62,  413 => 18,  404 => 17,  386 => 7,  369 => 5,  348 => 295,  346 => 290,  118 => 64,  116 => 62,  72 => 20,  70 => 17,  57 => 7,  54 => 6,  52 => 5,  46 => 1,);
+        return array (  458 => 294,  449 => 293,  439 => 63,  430 => 62,  419 => 18,  410 => 17,  392 => 7,  375 => 5,  354 => 298,  352 => 293,  338 => 281,  336 => 280,  118 => 64,  116 => 62,  72 => 20,  70 => 17,  57 => 7,  54 => 6,  52 => 5,  46 => 1,);
     }
 
     public function getSourceContext()
@@ -492,7 +503,7 @@ class __TwigTemplate_736e632945d8cb0df8b5730309410a1ee82171209e8e43cb5033059c05d
     {% block stylesheets %}
 
     {% endblock %}
-
+    
 </head>
 
 <body>
@@ -750,6 +761,9 @@ class __TwigTemplate_736e632945d8cb0df8b5730309410a1ee82171209e8e43cb5033059c05d
                             </div>
                         </div>
                     </div>
+
+
+                    {% include 'security/registration.html.twig' %}
 
 
                     <a href=\"#\" data-toggle=\"modal\" data-dismiss=\"modal\" data-target=\"#connexionModal\"><label style=\"cursor: pointer;\" for=\"\"
