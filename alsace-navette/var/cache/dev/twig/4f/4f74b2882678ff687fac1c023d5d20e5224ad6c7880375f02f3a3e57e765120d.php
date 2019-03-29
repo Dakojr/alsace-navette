@@ -301,6 +301,6 @@ class __TwigTemplate_0a248957cfeb805d492e6b72cda1b43ba56722dccfccf3c08ddc9adbb71
         <div class=\"bg-white shadow-sm mx-auto\" style=\"width: 80%; height: 300px; border-radius: 21px 21px 0 0;\"></div>
     </div>
 </div>
-{% endblock %}", "home/home.html.twig", "C:\\wamp64\\www\\git\\alsace-navette\\templates\\home\\home.html.twig");
+{% endblock %}", "home/home.html.twig", "C:\\wamp64\\www\\alsace-nav\\alsace-navette\\templates\\home\\home.html.twig");
     }
 }

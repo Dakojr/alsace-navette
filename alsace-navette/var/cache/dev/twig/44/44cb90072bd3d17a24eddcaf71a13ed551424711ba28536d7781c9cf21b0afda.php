@@ -69,7 +69,7 @@ class __TwigTemplate_760df47fe4741224cc442a47a2f693656fa4125067be340b07fdba38c7d
         // line 17
         $this->displayBlock('stylesheets', $context, $blocks);
         // line 20
-        echo "
+        echo "    
 </head>
 
 <body>
@@ -190,7 +190,10 @@ class __TwigTemplate_760df47fe4741224cc442a47a2f693656fa4125067be340b07fdba38c7d
                     <div class=\"invalid-feedback\">
                         Veuillez renseigné un e-mail.
                     </div>
-                    <a href=\"#\" data-dismiss=\"modal\" data-toggle=\"modal\" data-target=\"#inscriptionModal\"><label
+                    <a href=\"";
+        // line 139
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("security_registration");
+        echo "\"><label
                             style=\"cursor: pointer;\" for=\"\" class=\"text-center col-12 mt-2\">Inscription</label></a>
                 </div>
                 <div class=\"modal-footer\">
@@ -203,151 +206,15 @@ class __TwigTemplate_760df47fe4741224cc442a47a2f693656fa4125067be340b07fdba38c7d
 
 
 
-    <div class=\"modal fade\" id=\"inscriptionModal\" tabindex=\"-1\" role=\"dialog\" aria-labelledby=\"exampleModalCenterTitle\"
-        aria-hidden=\"true\">
-        <div class=\"modal-dialog modal-dialog-centered\" role=\"document\">
-            <div class=\"modal-content\">
-                <div class=\"modal-header\">
-                    <h5 class=\"modal-title text-center\" id=\"exampleModalLongTitle\">Inscription</h5>
-                    <button type=\"button\" class=\"close\" data-dismiss=\"modal\" aria-label=\"Close\">
-                        <span aria-hidden=\"true\">&times;</span>
-                    </button>
-                </div>
-                <div class=\"modal-body\">
-                    <div class=\"d-flex justify-content-around\">
-                        <div class=\"form-check\">
-                            <input class=\"form-check-input\" type=\"radio\" name=\"exampleRadios\" id=\"exampleRadios1\"
-                                value=\"option1\" checked>
-                            <label class=\"form-check-label\" for=\"exampleRadios1\">
-                                Madame
-                            </label>
-                        </div>
-                        <div class=\"form-check\">
-                            <input class=\"form-check-input\" type=\"radio\" name=\"exampleRadios\" id=\"exampleRadios2\"
-                                value=\"option2\">
-                            <label class=\"form-check-label\" for=\"exampleRadios2\">
-                                Monsieur
-                            </label>
-                        </div>
-                    </div>
-                    <div class=\"invalid-feedback\">
-                        Veuillez renseigné une civilité.
-                    </div>
-                    <hr>
-                    <div class=\"d-flex justify-content-around\">
-                        <div>
-                            <label for=\"nom\" class=\"text-center col-12 mt-2\">Nom</label>
-                            <input type=\"text\" id=\"nom\" class=\"form-control\" placeholder=\"Nom...\" name=\"nom\" required>
-                            <div class=\"invalid-feedback\">
-                                Veuillez renseigné un nom.
-                            </div>
-                        </div>
-                        <div>
-                            <label for=\"prenom\" class=\"text-center col-12 mt-2\">Prénom</label>
-                            <input type=\"text\" id=\"prenom\" class=\"form-control\" placeholder=\"Prénom...\" name=\"prenom\"
-                                required>
-                            <div class=\"invalid-feedback\">
-                                Veuillez renseigné un prénom.
-                            </div>
-                        </div>
-                    </div>
-                    <div class=\"d-flex justify-content-center\">
-                        <div>
-                            <label for=\"email\" class=\"text-center col-12 mt-2\">E-mail</label>
-                            <input type=\"email\" id=\"inputEmail\" class=\"form-control\" placeholder=\"E-mail...\" required>
-                            <div class=\"invalid-feedback\">
-                                Veuillez renseigné un e-mail.
-                            </div>
-                        </div>
-                    </div>
-                    <div class=\"d-flex justify-content-center\">
-                        <div>
-                            <label for=\"password\" class=\"text-center col-12 mt-2\">Mot de Passe</label>
-                            <input type=\"password\" id=\"inputPassword\" class=\"form-control\" placeholder=\"Mot de passe...\"
-                                required>
-                            <div class=\"invalid-feedback\">
-                                Veuillez renseigné un mot de passe.
-                            </div>
-                        </div>
-                    </div>
-                    <div class=\"d-flex justify-content-center\">
-                        <div>
-                            <label for=\"password\" class=\"text-center col-12 mt-2\">Confirmaton</label>
-                            <input type=\"password\" id=\"inputPassword\" class=\"form-control\" placeholder=\"Mot de passe...\"
-                                required>
-                            <div class=\"invalid-feedback\">
-                                Veuillez renseigné un mot de passe.
-                            </div>
-                        </div>
-                    </div>
-                    <div class=\"d-flex justify-content-around\">
-                        <div>
-                            <label for=\"cp\" class=\"text-center col-12 mt-2\">Code Postal</label>
-                            <input type=\"text\" id=\"cp\" class=\"form-control\" placeholder=\"Code postal...\" name=\"cp\"
-                                required>
-                            <div class=\"invalid-feedback\">
-                                Veuillez renseigné un code postal.
-                            </div>
-                        </div>
-                        <div>
-                            <label for=\"ville\" class=\"text-center col-12 mt-2\">Ville</label>
-                            <input type=\"text\" id=\"ville\" class=\"form-control\" placeholder=\"Ville...\" name=\"ville\"
-                                required>
-                            <div class=\"invalid-feedback\">
-                                Veuillez renseigné une ville.
-                            </div>
-                        </div>
-                    </div>
-                    <div class=\"d-flex justify-content-center\">
-                        <div>
-                            <label for=\"telephone\" class=\"text-center col-12 mt-2\">Telephone</label>
-                            <input type=\"tel\" id=\"telephone\" class=\"form-control\" placeholder=\"telephone...\"
-                                name=\"telephone\" required>
-                            <div class=\"invalid-feedback\">
-                                Veuillez renseigné un numéro de téléphone.
-                            </div>
-                        </div>
-                    </div>
-                    <div class=\"d-flex justify-content-center\">
-                        <div>
-                            <div class=\"form-check\">
-                                <input class=\"form-check-input\" type=\"checkbox\" value=\"\" id=\"CheckPro\"
-                                    onclick=\"Prochecked()\">
-                                <label class=\"form-check-label\" for=\"CheckPro\">
-                                    Professionel ?
-                                </label>
-                            </div>
-                        </div>
-                    </div>
-                    <div class=\"d-flex justify-content-center\">
-                        <div style=\"display:none\" id=\"InputPro\">
-                            <label for=\"telephone\" class=\"text-center col-12 mt-2\">Nom de la société</label>
-                            <input type=\"text\" class=\"form-control\" placeholder=\"telephone...\" name=\"telephone\">
-                            <div class=\"invalid-feedback\">
-                                Veuillez renseigné un nom de société
-                            </div>
-                        </div>
-                    </div>
+    
 
-
-                    <a href=\"#\" data-toggle=\"modal\" data-target=\"#connexionModal\"><label style=\"cursor: pointer;\" for=\"\"
-                            class=\"text-center col-12 mt-2\">Connexion</label></a>
-                </div>
-                <div class=\"modal-footer\">
-                    <button type=\"button\" class=\"btn btn-secondary\" data-dismiss=\"modal\">Close</button>
-                    <button type=\"button\" class=\"btn btn-primary\">Connexion</button>
-                </div>
-            </div>
-        </div>
-    </div>
+    <div id=\"editmodal\"></div>
     ";
-        // line 289
+        // line 155
         $this->displayBlock('javascripts', $context, $blocks);
-        // line 294
+        // line 161
         echo "
-    <script src=\"https://code.jquery.com/jquery-3.2.1.slim.min.js\"
-        integrity=\"sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN\"
-        crossorigin=\"anonymous\"></script>
+    <script src=\"https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js\"></script>
     <script>window.jQuery || document.write('<script src=\"../../assets/js/vendor/jquery-slim.min.js\"><\\/script>')</script>
     <script src=\"https://getbootstrap.com/docs/4.0/assets/js/vendor/popper.min.js\"></script>
     <script src=\"https://getbootstrap.com/docs/4.0/dist/js/bootstrap.min.js\"></script>
@@ -438,7 +305,7 @@ class __TwigTemplate_760df47fe4741224cc442a47a2f693656fa4125067be340b07fdba38c7d
 
     }
 
-    // line 289
+    // line 155
     public function block_javascripts($context, array $blocks = [])
     {
         $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e = $this->extensions["Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension"];
@@ -447,9 +314,10 @@ class __TwigTemplate_760df47fe4741224cc442a47a2f693656fa4125067be340b07fdba38c7d
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "javascripts"));
 
-        // line 290
+        // line 156
         echo "
     <script src=\"javascript/inscription.js\"></script>
+    <script src=\"javascript/modal.js\"></script>
 
     ";
         
@@ -465,9 +333,14 @@ class __TwigTemplate_760df47fe4741224cc442a47a2f693656fa4125067be340b07fdba38c7d
         return "base.html.twig";
     }
 
+    public function isTraitable()
+    {
+        return false;
+    }
+
     public function getDebugInfo()
     {
-        return array (  451 => 290,  442 => 289,  432 => 62,  423 => 61,  412 => 18,  403 => 17,  385 => 7,  368 => 5,  347 => 294,  345 => 289,  117 => 63,  115 => 61,  72 => 20,  70 => 17,  57 => 7,  54 => 6,  52 => 5,  46 => 1,);
+        return array (  318 => 156,  309 => 155,  299 => 62,  290 => 61,  279 => 18,  270 => 17,  252 => 7,  235 => 5,  216 => 161,  214 => 155,  195 => 139,  117 => 63,  115 => 61,  72 => 20,  70 => 17,  57 => 7,  54 => 6,  52 => 5,  46 => 1,);
     }
 
     public function getSourceContext()
@@ -491,7 +364,7 @@ class __TwigTemplate_760df47fe4741224cc442a47a2f693656fa4125067be340b07fdba38c7d
     {% block stylesheets %}
 
     {% endblock %}
-
+    
 </head>
 
 <body>
@@ -610,7 +483,7 @@ class __TwigTemplate_760df47fe4741224cc442a47a2f693656fa4125067be340b07fdba38c7d
                     <div class=\"invalid-feedback\">
                         Veuillez renseigné un e-mail.
                     </div>
-                    <a href=\"#\" data-dismiss=\"modal\" data-toggle=\"modal\" data-target=\"#inscriptionModal\"><label
+                    <a href=\"{{ path('security_registration')}}\"><label
                             style=\"cursor: pointer;\" for=\"\" class=\"text-center col-12 mt-2\">Inscription</label></a>
                 </div>
                 <div class=\"modal-footer\">
@@ -623,152 +496,17 @@ class __TwigTemplate_760df47fe4741224cc442a47a2f693656fa4125067be340b07fdba38c7d
 
 
 
-    <div class=\"modal fade\" id=\"inscriptionModal\" tabindex=\"-1\" role=\"dialog\" aria-labelledby=\"exampleModalCenterTitle\"
-        aria-hidden=\"true\">
-        <div class=\"modal-dialog modal-dialog-centered\" role=\"document\">
-            <div class=\"modal-content\">
-                <div class=\"modal-header\">
-                    <h5 class=\"modal-title text-center\" id=\"exampleModalLongTitle\">Inscription</h5>
-                    <button type=\"button\" class=\"close\" data-dismiss=\"modal\" aria-label=\"Close\">
-                        <span aria-hidden=\"true\">&times;</span>
-                    </button>
-                </div>
-                <div class=\"modal-body\">
-                    <div class=\"d-flex justify-content-around\">
-                        <div class=\"form-check\">
-                            <input class=\"form-check-input\" type=\"radio\" name=\"exampleRadios\" id=\"exampleRadios1\"
-                                value=\"option1\" checked>
-                            <label class=\"form-check-label\" for=\"exampleRadios1\">
-                                Madame
-                            </label>
-                        </div>
-                        <div class=\"form-check\">
-                            <input class=\"form-check-input\" type=\"radio\" name=\"exampleRadios\" id=\"exampleRadios2\"
-                                value=\"option2\">
-                            <label class=\"form-check-label\" for=\"exampleRadios2\">
-                                Monsieur
-                            </label>
-                        </div>
-                    </div>
-                    <div class=\"invalid-feedback\">
-                        Veuillez renseigné une civilité.
-                    </div>
-                    <hr>
-                    <div class=\"d-flex justify-content-around\">
-                        <div>
-                            <label for=\"nom\" class=\"text-center col-12 mt-2\">Nom</label>
-                            <input type=\"text\" id=\"nom\" class=\"form-control\" placeholder=\"Nom...\" name=\"nom\" required>
-                            <div class=\"invalid-feedback\">
-                                Veuillez renseigné un nom.
-                            </div>
-                        </div>
-                        <div>
-                            <label for=\"prenom\" class=\"text-center col-12 mt-2\">Prénom</label>
-                            <input type=\"text\" id=\"prenom\" class=\"form-control\" placeholder=\"Prénom...\" name=\"prenom\"
-                                required>
-                            <div class=\"invalid-feedback\">
-                                Veuillez renseigné un prénom.
-                            </div>
-                        </div>
-                    </div>
-                    <div class=\"d-flex justify-content-center\">
-                        <div>
-                            <label for=\"email\" class=\"text-center col-12 mt-2\">E-mail</label>
-                            <input type=\"email\" id=\"inputEmail\" class=\"form-control\" placeholder=\"E-mail...\" required>
-                            <div class=\"invalid-feedback\">
-                                Veuillez renseigné un e-mail.
-                            </div>
-                        </div>
-                    </div>
-                    <div class=\"d-flex justify-content-center\">
-                        <div>
-                            <label for=\"password\" class=\"text-center col-12 mt-2\">Mot de Passe</label>
-                            <input type=\"password\" id=\"inputPassword\" class=\"form-control\" placeholder=\"Mot de passe...\"
-                                required>
-                            <div class=\"invalid-feedback\">
-                                Veuillez renseigné un mot de passe.
-                            </div>
-                        </div>
-                    </div>
-                    <div class=\"d-flex justify-content-center\">
-                        <div>
-                            <label for=\"password\" class=\"text-center col-12 mt-2\">Confirmaton</label>
-                            <input type=\"password\" id=\"inputPassword\" class=\"form-control\" placeholder=\"Mot de passe...\"
-                                required>
-                            <div class=\"invalid-feedback\">
-                                Veuillez renseigné un mot de passe.
-                            </div>
-                        </div>
-                    </div>
-                    <div class=\"d-flex justify-content-around\">
-                        <div>
-                            <label for=\"cp\" class=\"text-center col-12 mt-2\">Code Postal</label>
-                            <input type=\"text\" id=\"cp\" class=\"form-control\" placeholder=\"Code postal...\" name=\"cp\"
-                                required>
-                            <div class=\"invalid-feedback\">
-                                Veuillez renseigné un code postal.
-                            </div>
-                        </div>
-                        <div>
-                            <label for=\"ville\" class=\"text-center col-12 mt-2\">Ville</label>
-                            <input type=\"text\" id=\"ville\" class=\"form-control\" placeholder=\"Ville...\" name=\"ville\"
-                                required>
-                            <div class=\"invalid-feedback\">
-                                Veuillez renseigné une ville.
-                            </div>
-                        </div>
-                    </div>
-                    <div class=\"d-flex justify-content-center\">
-                        <div>
-                            <label for=\"telephone\" class=\"text-center col-12 mt-2\">Telephone</label>
-                            <input type=\"tel\" id=\"telephone\" class=\"form-control\" placeholder=\"telephone...\"
-                                name=\"telephone\" required>
-                            <div class=\"invalid-feedback\">
-                                Veuillez renseigné un numéro de téléphone.
-                            </div>
-                        </div>
-                    </div>
-                    <div class=\"d-flex justify-content-center\">
-                        <div>
-                            <div class=\"form-check\">
-                                <input class=\"form-check-input\" type=\"checkbox\" value=\"\" id=\"CheckPro\"
-                                    onclick=\"Prochecked()\">
-                                <label class=\"form-check-label\" for=\"CheckPro\">
-                                    Professionel ?
-                                </label>
-                            </div>
-                        </div>
-                    </div>
-                    <div class=\"d-flex justify-content-center\">
-                        <div style=\"display:none\" id=\"InputPro\">
-                            <label for=\"telephone\" class=\"text-center col-12 mt-2\">Nom de la société</label>
-                            <input type=\"text\" class=\"form-control\" placeholder=\"telephone...\" name=\"telephone\">
-                            <div class=\"invalid-feedback\">
-                                Veuillez renseigné un nom de société
-                            </div>
-                        </div>
-                    </div>
+    
 
-
-                    <a href=\"#\" data-toggle=\"modal\" data-target=\"#connexionModal\"><label style=\"cursor: pointer;\" for=\"\"
-                            class=\"text-center col-12 mt-2\">Connexion</label></a>
-                </div>
-                <div class=\"modal-footer\">
-                    <button type=\"button\" class=\"btn btn-secondary\" data-dismiss=\"modal\">Close</button>
-                    <button type=\"button\" class=\"btn btn-primary\">Connexion</button>
-                </div>
-            </div>
-        </div>
-    </div>
+    <div id=\"editmodal\"></div>
     {% block javascripts %}
 
     <script src=\"javascript/inscription.js\"></script>
+    <script src=\"javascript/modal.js\"></script>
 
     {% endblock %}
 
-    <script src=\"https://code.jquery.com/jquery-3.2.1.slim.min.js\"
-        integrity=\"sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN\"
-        crossorigin=\"anonymous\"></script>
+    <script src=\"https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js\"></script>
     <script>window.jQuery || document.write('<script src=\"../../assets/js/vendor/jquery-slim.min.js\"><\\/script>')</script>
     <script src=\"https://getbootstrap.com/docs/4.0/assets/js/vendor/popper.min.js\"></script>
     <script src=\"https://getbootstrap.com/docs/4.0/dist/js/bootstrap.min.js\"></script>
@@ -776,6 +514,6 @@ class __TwigTemplate_760df47fe4741224cc442a47a2f693656fa4125067be340b07fdba38c7d
     <script src=\"https://getbootstrap.com/docs/4.0/assets/js/vendor/holder.min.js\"></script>
 </body>
 
-</html>", "base.html.twig", "C:\\wamp64\\www\\git\\alsace-navette\\templates\\base.html.twig");
+</html>", "base.html.twig", "C:\\wamp64\\www\\alsace-nav\\alsace-navette\\templates\\base.html.twig");
     }
 }

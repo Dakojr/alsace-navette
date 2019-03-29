@@ -17,7 +17,6 @@ class RegistrationType extends AbstractType
         $builder
             ->add('civilite', ChoiceType::class, [
                 'choices'  => [
-                    'Civilité' => null,
                     'Monsieur' => 'Mr',
                     'Madame' => 'Mme',
                 ],
@@ -28,7 +27,6 @@ class RegistrationType extends AbstractType
             ->add('codepostal', null, array('label' => false))
             ->add('email', null, array('label' => false))
             ->add('ville', null, array('label' => false))
-            ->add('telfixe', null, array('label' => false))
             ->add('telportable', null, array('label' => false))
             ->add('password', PasswordType::class, array('label' => false))
             ->add('professionnel', CheckBoxType::class, array('label' => false, 'required' => false))
