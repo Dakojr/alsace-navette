@@ -18,8 +18,8 @@ class RegistrationType extends AbstractType
             ->add('civilite', ChoiceType::class, [
                 'choices'  => [
                     'Civilité' => null,
-                    'Monsieur' => true,
-                    'Madame' => false,
+                    'Monsieur' => 'Mr',
+                    'Madame' => 'Mme',
                 ],
                 'label' => false
             ])
@@ -31,7 +31,7 @@ class RegistrationType extends AbstractType
             ->add('telfixe', null, array('label' => false))
             ->add('telportable', null, array('label' => false))
             ->add('password', PasswordType::class, array('label' => false))
-            ->add('professionnel', CheckBoxType::class, array('label' => false))
+            ->add('professionnel', CheckBoxType::class, array('label' => false, 'required' => false))
             ->add('nomsociete', null, array('label' => false))
         ;
     }

@@ -73,6 +73,12 @@ class Reservation
      */
     private $facture;
 
+    public function __construct()
+    {
+        $this->dateReservation = new \DateTime();
+
+    }
+
     public function getId(): ?int
     {
         return $this->id;

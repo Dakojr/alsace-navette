@@ -56,6 +56,7 @@ class Facture
     public function __construct()
     {
         $this->supplement = new ArrayCollection();
+        $this->dateFacture =  new \DateTime();
     }
 
     public function getId(): ?int

@@ -4,13 +4,11 @@
         <div class="modal-content">
             <div class="modal-header">
                 <h5 class="modal-title text-center" id="exampleModalLongTitle">Inscription</h5>
-                <button type="button" onClick= "RemoveChild()" class="close" data-dismiss="modal" aria-label="Close">
+                <button type="button" onClick="RemoveChild()" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
             </div>
             <div class="modal-body">
-
-
 
                 {{ form_start(form) }}
 
@@ -113,7 +111,7 @@
                 <div class="d-flex justify-content-center">
                     <div>
                         <div class="form-check">
-                            {{ form_row(form.professionnel, { 'id' : 'CheckPro' ,'attr' : { 'class': 'form-check-input', 'onclick': 'Prochecked()', } }) }}
+                            {{ form_row(form.professionnel, { 'id' : 'CheckPro' ,'attr' : { 'class': 'form-check-input', 'onclick': 'Prochecked()' } }) }}
                             <label class="form-check-label" for="CheckPro">
                                 Professionel ?
                             </label>
@@ -131,12 +129,15 @@
                 </div>
 
                 <a href="#" data-toggle="modal" data-dismiss="modal" data-target="#connexionModal"><label
-                        style="cursor: pointer;" for="" class="text-center col-12 mt-2">Inscription</label></a>
+                        style="cursor: pointer;" for="" class="text-center col-12 mt-2">Connexion</label></a>
+
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal"
+                        onClick="RemoveChild()">Close</button>
+                    <button type="submit" class="btn btn-primary">Inscription</button>
+                </div>
             </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-dismiss="modal" onClick= "RemoveChild()">Close</button>
-                <button type="button" class="btn btn-primary">Connexion</button>
-            </div>
+
         </div>
     </div>
 </div>
