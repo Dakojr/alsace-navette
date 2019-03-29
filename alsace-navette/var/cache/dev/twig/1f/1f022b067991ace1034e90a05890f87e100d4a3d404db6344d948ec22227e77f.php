@@ -44,7 +44,7 @@ class __TwigTemplate_3edf5e837ec195d4fa7218d4d0bd79f853900040af991ccd9b7dd544725
         <div class=\"modal-content\">
             <div class=\"modal-header\">
                 <h5 class=\"modal-title text-center\" id=\"exampleModalLongTitle\">Inscription</h5>
-                <button type=\"button\" onClick= \"RemoveChild()\" class=\"close\" data-dismiss=\"modal\" aria-label=\"Close\">
+                <button type=\"button\" onClick=\"RemoveChild()\" class=\"close\" data-dismiss=\"modal\" aria-label=\"Close\">
                     <span aria-hidden=\"true\">&times;</span>
                 </button>
             </div>
@@ -207,16 +207,16 @@ class __TwigTemplate_3edf5e837ec195d4fa7218d4d0bd79f853900040af991ccd9b7dd544725
                 <a href=\"#\" data-toggle=\"modal\" data-dismiss=\"modal\" data-target=\"#connexionModal\"><label
                         style=\"cursor: pointer;\" for=\"\" class=\"text-center col-12 mt-2\">Connexion</label></a>
 
-                        <div class=\"modal-footer\">
-                <button type=\"button\" class=\"btn btn-secondary\" data-dismiss=\"modal\" onClick= \"RemoveChild()\">Close</button>
-                <button type=\"submit\" class=\"btn btn-primary\">Inscription</button>
+                <div class=\"modal-footer\">
+                    <button type=\"button\" class=\"btn btn-secondary\" data-dismiss=\"modal\"
+                        onClick=\"RemoveChild()\">Close</button>
+                    <button type=\"submit\" class=\"btn btn-primary\">Inscription</button>
+                </div>
             </div>
-            </div>
-            
+
         </div>
     </div>
-</div>
-";
+</div>";
         
         $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e->leave($__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e_prof);
 
@@ -248,7 +248,7 @@ class __TwigTemplate_3edf5e837ec195d4fa7218d4d0bd79f853900040af991ccd9b7dd544725
         <div class=\"modal-content\">
             <div class=\"modal-header\">
                 <h5 class=\"modal-title text-center\" id=\"exampleModalLongTitle\">Inscription</h5>
-                <button type=\"button\" onClick= \"RemoveChild()\" class=\"close\" data-dismiss=\"modal\" aria-label=\"Close\">
+                <button type=\"button\" onClick=\"RemoveChild()\" class=\"close\" data-dismiss=\"modal\" aria-label=\"Close\">
                     <span aria-hidden=\"true\">&times;</span>
                 </button>
             </div>
@@ -375,15 +375,15 @@ class __TwigTemplate_3edf5e837ec195d4fa7218d4d0bd79f853900040af991ccd9b7dd544725
                 <a href=\"#\" data-toggle=\"modal\" data-dismiss=\"modal\" data-target=\"#connexionModal\"><label
                         style=\"cursor: pointer;\" for=\"\" class=\"text-center col-12 mt-2\">Connexion</label></a>
 
-                        <div class=\"modal-footer\">
-                <button type=\"button\" class=\"btn btn-secondary\" data-dismiss=\"modal\" onClick= \"RemoveChild()\">Close</button>
-                <button type=\"submit\" class=\"btn btn-primary\">Inscription</button>
+                <div class=\"modal-footer\">
+                    <button type=\"button\" class=\"btn btn-secondary\" data-dismiss=\"modal\"
+                        onClick=\"RemoveChild()\">Close</button>
+                    <button type=\"submit\" class=\"btn btn-primary\">Inscription</button>
+                </div>
             </div>
-            </div>
-            
+
         </div>
     </div>
-</div>
-", "security/registration.html.twig", "/home/dako/Dossier/alsace-navette/alsace-navette/templates/security/registration.html.twig");
+</div>", "security/registration.html.twig", "/home/dako/Dossier/alsace-navette/alsace-navette/templates/security/registration.html.twig");
     }
 }
