@@ -39,12 +39,12 @@ class __TwigTemplate_3edf5e837ec195d4fa7218d4d0bd79f853900040af991ccd9b7dd544725
 
         // line 1
         echo "<div class=\"modal fade\" id=\"registrationModal\" tabindex=\"-1\" role=\"dialog\" aria-labelledby=\"exampleModalCenterTitle\"
-    aria-hidden=\"true\">
+    aria-hidden=\"true\" data-backdrop=\"static\" data-keyboard=\"false\">
     <div class=\"modal-dialog modal-dialog-centered\" role=\"document\">
         <div class=\"modal-content\">
             <div class=\"modal-header\">
                 <h5 class=\"modal-title text-center\" id=\"exampleModalLongTitle\">Inscription</h5>
-                <button type=\"button\" class=\"close\" data-dismiss=\"modal\" aria-label=\"Close\">
+                <button type=\"button\" onClick= \"RemoveChild()\" class=\"close\" data-dismiss=\"modal\" aria-label=\"Close\">
                     <span aria-hidden=\"true\">&times;</span>
                 </button>
             </div>
@@ -210,7 +210,7 @@ class __TwigTemplate_3edf5e837ec195d4fa7218d4d0bd79f853900040af991ccd9b7dd544725
                         style=\"cursor: pointer;\" for=\"\" class=\"text-center col-12 mt-2\">Inscription</label></a>
             </div>
             <div class=\"modal-footer\">
-                <button type=\"button\" class=\"btn btn-secondary\" data-dismiss=\"modal\">Close</button>
+                <button type=\"button\" class=\"btn btn-secondary\" data-dismiss=\"modal\" onClick= \"RemoveChild()\">Close</button>
                 <button type=\"button\" class=\"btn btn-primary\">Connexion</button>
             </div>
         </div>
@@ -242,12 +242,12 @@ class __TwigTemplate_3edf5e837ec195d4fa7218d4d0bd79f853900040af991ccd9b7dd544725
     public function getSourceContext()
     {
         return new Source("<div class=\"modal fade\" id=\"registrationModal\" tabindex=\"-1\" role=\"dialog\" aria-labelledby=\"exampleModalCenterTitle\"
-    aria-hidden=\"true\">
+    aria-hidden=\"true\" data-backdrop=\"static\" data-keyboard=\"false\">
     <div class=\"modal-dialog modal-dialog-centered\" role=\"document\">
         <div class=\"modal-content\">
             <div class=\"modal-header\">
                 <h5 class=\"modal-title text-center\" id=\"exampleModalLongTitle\">Inscription</h5>
-                <button type=\"button\" class=\"close\" data-dismiss=\"modal\" aria-label=\"Close\">
+                <button type=\"button\" onClick= \"RemoveChild()\" class=\"close\" data-dismiss=\"modal\" aria-label=\"Close\">
                     <span aria-hidden=\"true\">&times;</span>
                 </button>
             </div>
@@ -377,7 +377,7 @@ class __TwigTemplate_3edf5e837ec195d4fa7218d4d0bd79f853900040af991ccd9b7dd544725
                         style=\"cursor: pointer;\" for=\"\" class=\"text-center col-12 mt-2\">Inscription</label></a>
             </div>
             <div class=\"modal-footer\">
-                <button type=\"button\" class=\"btn btn-secondary\" data-dismiss=\"modal\">Close</button>
+                <button type=\"button\" class=\"btn btn-secondary\" data-dismiss=\"modal\" onClick= \"RemoveChild()\">Close</button>
                 <button type=\"button\" class=\"btn btn-primary\">Connexion</button>
             </div>
         </div>

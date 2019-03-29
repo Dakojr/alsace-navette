@@ -210,7 +210,7 @@ class __TwigTemplate_736e632945d8cb0df8b5730309410a1ee82171209e8e43cb5033059c05d
     ";
         // line 156
         $this->displayBlock('javascripts', $context, $blocks);
-        // line 161
+        // line 162
         echo "
     <script src=\"https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js\"></script>
     <script>window.jQuery || document.write('<script src=\"../../assets/js/vendor/jquery-slim.min.js\"><\\/script>')</script>
@@ -315,6 +315,7 @@ class __TwigTemplate_736e632945d8cb0df8b5730309410a1ee82171209e8e43cb5033059c05d
         // line 157
         echo "
     <script src=\"javascript/inscription.js\"></script>
+    <script src=\"javascript/modal.js\"></script>
 
     ";
         
@@ -332,7 +333,7 @@ class __TwigTemplate_736e632945d8cb0df8b5730309410a1ee82171209e8e43cb5033059c05d
 
     public function getDebugInfo()
     {
-        return array (  316 => 157,  307 => 156,  297 => 63,  288 => 62,  277 => 18,  268 => 17,  250 => 7,  233 => 5,  214 => 161,  212 => 156,  118 => 64,  116 => 62,  72 => 20,  70 => 17,  57 => 7,  54 => 6,  52 => 5,  46 => 1,);
+        return array (  316 => 157,  307 => 156,  297 => 63,  288 => 62,  277 => 18,  268 => 17,  250 => 7,  233 => 5,  214 => 162,  212 => 156,  118 => 64,  116 => 62,  72 => 20,  70 => 17,  57 => 7,  54 => 6,  52 => 5,  46 => 1,);
     }
 
     public function getSourceContext()
@@ -495,6 +496,7 @@ class __TwigTemplate_736e632945d8cb0df8b5730309410a1ee82171209e8e43cb5033059c05d
     {% block javascripts %}
 
     <script src=\"javascript/inscription.js\"></script>
+    <script src=\"javascript/modal.js\"></script>
 
     {% endblock %}
 
