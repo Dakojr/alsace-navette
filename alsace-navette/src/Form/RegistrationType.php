@@ -6,7 +6,10 @@ use App\Entity\User;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
+<<<<<<< HEAD
 use Symfony\Component\Form\Extension\Core\Type\RadioType;
+=======
+>>>>>>> master
 use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
 use Symfony\Component\Form\Extension\Core\Type\CheckboxType;
 use Symfony\Component\Form\Extension\Core\Type\PasswordType;
@@ -17,6 +20,7 @@ class RegistrationType extends AbstractType
     {
         $builder
             ->add('civilite', ChoiceType::class, [
+<<<<<<< HEAD
                 'choices' => [
                     'Civilité' => null,
                     'Monsieur' => true,
@@ -34,6 +38,25 @@ class RegistrationType extends AbstractType
             ->add('password', PasswordType::class)
             ->add('professionnel', CheckboxType::class, array('label => false'))
             ->add('nomsociete', null, array('label => false'))
+=======
+                'choices'  => [
+                    'Civilité' => null,
+                    'Monsieur' => true,
+                    'Madame' => false,
+                ],
+                'label' => false
+            ])
+            ->add('nom', null, array('label' => false))
+            ->add('prenom', null, array('label' => false))
+            ->add('codepostal', null, array('label' => false))
+            ->add('email', null, array('label' => false))
+            ->add('ville', null, array('label' => false))
+            ->add('telfixe', null, array('label' => false))
+            ->add('telportable', null, array('label' => false))
+            ->add('password', PasswordType::class, array('label' => false))
+            ->add('professionnel', CheckBoxType::class, array('label' => false))
+            ->add('nomsociete', null, array('label' => false))
+>>>>>>> master
         ;
     }
 

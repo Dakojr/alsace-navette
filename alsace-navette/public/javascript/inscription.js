@@ -11,3 +11,16 @@ function Prochecked() {
         inputPro.style.display = "none";
     }
 }
+
+function Registration() {
+    $.get("/registration",
+        {
+
+        },
+        (data) => {
+            console.log(data)
+            var htmlmodal = data
+            $('#editmodal').append(htmlmodal);
+            $('#registrationModal').modal('show');
+        })
+}

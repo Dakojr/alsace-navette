@@ -115,14 +115,18 @@ class __TwigTemplate_2f84f8aa3f015faee8275ca917d1e57fdc19bad9979150d4800261b83a8
     <div class=\"p-lg-5\">
         <img class=\"img-top-body\" src=\"images/airport-logo.png\">
     </div>
-    <div class=\"col-md-8 mx-auto\">
+
+    <a href=\"/horairesTarifs\" class=\"mt-3\">Consultez les horaires et les tarifs <i class=\"far fa-clock fa-lg\"></i></a>
+
+    <div class=\"col-md-8 mx-auto mt-3\">
         <h1>Faites votre réservation</h1>
         <hr class=\"py-3\">
 
         <div class=\"d-flex justify-content-center\">
             <div class=\"col-md-6 mb-3\">
                 <div class=\"form-check\">
-                    <input class=\"form-check-input\" type=\"radio\" name=\"exampleRadios\" id=\"\" value=\"option1\"  checked>
+                    <input class=\"form-check-input\" type=\"radio\" name=\"exampleRadios\" id=\"CheckAllerSimple\" value=\"\"
+                        onclick=\"AllerSimple()\" checked>
                     <label class=\"form-check-label\" for=\"\">
                         Aller simple <i class=\"fas fa-arrow-right\"></i>
                     </label>
@@ -130,13 +134,125 @@ class __TwigTemplate_2f84f8aa3f015faee8275ca917d1e57fdc19bad9979150d4800261b83a8
             </div>
             <div class=\"col-md-6 mb-3\">
                 <div class=\"form-check\">
-                    <input class=\"form-check-input\" type=\"radio\" name=\"exampleRadios\" id=\"CheckAllerRetour\" value=\"option1\" onclick=\"AllerRetour()\">
+                    <input class=\"form-check-input\" type=\"radio\" name=\"exampleRadios\" id=\"CheckAllerRetour\" value=\"\"
+                        onclick=\"AllerRetour()\">
                     <label class=\"form-check-label\" for=\"\">
                         Aller / retour <i class=\"fas fa-arrows-alt-h\"></i>
                     </label>
                 </div>
             </div>
         </div>
+
+        <div style=\"display: none;\" id=\"FormAllerSimple\">
+            <form class=\"needs-validation\" novalidate>
+
+                <div class=\"d-flex justify-content-center\">
+                    <div class=\"col-md-6 mb-3\">
+                        <div>
+                            <label for=\"\">Départ</label>
+                            <select class=\"form-control\" style=\"text-align:center;\">
+                                <option value=\"1\">Strasbourg</option>
+                                <option value=\"2\">Bruxelle</option>
+                                <option value=\"3\">3</option>
+                                <option value=\"4\">4</option>
+                                <option value=\"5\">5</option>
+                                <option value=\"6\">6</option>
+                                <option value=\"7\">7</option>
+                                <option value=\"8\">8</option>
+                            </select>
+                            <div class=\"invalid-feedback\">
+                                Please choose a number.
+                            </div>
+                        </div>
+                    </div>
+                    <div class=\"col-md-6 mb-3\">
+                        <div>
+                            <label for=\"\">Destination</label>
+                            <select class=\"form-control\" required>
+                                <option value=\"1\">Strasbourg</option>
+                                <option value=\"2\">2</option>
+                                <option value=\"3\">3</option>
+                                <option value=\"4\">4</option>
+                                <option value=\"5\">5</option>
+                                <option value=\"6\">6</option>
+                                <option value=\"7\">7</option>
+                                <option value=\"8\">8</option>
+                            </select>
+                            <div class=\"invalid-feedback\">
+                                Please choose a number.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <hr>
+
+                <div>
+
+                </div>
+                <div class=\"d-flex justify-content-center\">
+                    <div class=\"col-md-6 mb-3\">
+                        <div>
+                            <label for=\"\">Nombre de Passager</label>
+                            <select class=\"form-control\" required>
+                                <option value=\"1\">1</option>
+                                <option value=\"2\">2</option>
+                                <option value=\"3\">3</option>
+                                <option value=\"4\">4</option>
+                                <option value=\"5\">5</option>
+                                <option value=\"6\">6</option>
+                                <option value=\"7\">7</option>
+                                <option value=\"8\">8</option>
+                            </select>
+                            <div class=\"invalid-feedback\">
+                                Please choose a number.
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+
+
+                <div class=\"d-flex justify-content-center\">
+                    <div class=\"col-md-6 mb-3\">
+                        <div class=\"form-group\">
+                            <label for=\"\">Date de départ</label>
+                            <input type=\"date\" class=\"form-control\" required>
+                        </div>
+                        <div class=\"invalid-feedback\">
+                            Please choose a number.
+                        </div>
+                    </div>
+                </div>
+                <div class=\"d-flex justify-content-center\">
+                    <div class=\"col-md-6 mb-3\">
+                        <div class=\"form-group\">
+                            <label for=\"\">Horaires de départ fixées par la société</label>
+                            <select class=\"form-control\">
+                                <option value=\"1\">HEURE</option>
+                                <option value=\"2\">2</option>
+                                <option value=\"3\">3</option>
+                                <option value=\"4\">4</option>
+                                <option value=\"5\">5</option>
+                                <option value=\"6\">6</option>
+                                <option value=\"7\">7</option>
+                                <option value=\"8\">8</option>
+                            </select>
+                        </div>
+                        <div class=\"invalid-feedback\">
+                            Please choose a number.
+                        </div>
+                    </div>
+                </div>
+                <button class=\"btn btn-primary\" type=\"submit\">Réserver !</button>
+            </form>
+        </div>
+
+
+
+
+
 
         <div style=\"display: none;\" id=\"FormAllerRetour\">
             <form class=\"needs-validation\" novalidate>
@@ -287,10 +403,10 @@ class __TwigTemplate_2f84f8aa3f015faee8275ca917d1e57fdc19bad9979150d4800261b83a8
                         </div>
                     </div>
                 </div>
-
+                <button class=\"btn btn-primary\" type=\"submit\">Réserver !</button>
+            </form>
         </div>
-        <button class=\"btn btn-primary\" type=\"submit\">Réserver !</button>
-        </form>
+
     </div>
 
 
@@ -328,7 +444,7 @@ class __TwigTemplate_2f84f8aa3f015faee8275ca917d1e57fdc19bad9979150d4800261b83a8
 
     }
 
-    // line 228
+    // line 344
     public function block_javascripts($context, array $blocks = [])
     {
         $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e = $this->extensions["Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension"];
@@ -337,7 +453,7 @@ class __TwigTemplate_2f84f8aa3f015faee8275ca917d1e57fdc19bad9979150d4800261b83a8
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "javascripts"));
 
-        // line 229
+        // line 345
         echo "
 <script src=\"javascript/reservationAeroport.js\"></script>
 
@@ -362,7 +478,7 @@ class __TwigTemplate_2f84f8aa3f015faee8275ca917d1e57fdc19bad9979150d4800261b83a8
 
     public function getDebugInfo()
     {
-        return array (  341 => 229,  332 => 228,  113 => 17,  104 => 16,  92 => 12,  83 => 11,  68 => 4,  59 => 3,  27 => 1,);
+        return array (  457 => 345,  448 => 344,  113 => 17,  104 => 16,  92 => 12,  83 => 11,  68 => 4,  59 => 3,  27 => 1,);
     }
 
     public function getSourceContext()
@@ -388,14 +504,18 @@ class __TwigTemplate_2f84f8aa3f015faee8275ca917d1e57fdc19bad9979150d4800261b83a8
     <div class=\"p-lg-5\">
         <img class=\"img-top-body\" src=\"images/airport-logo.png\">
     </div>
-    <div class=\"col-md-8 mx-auto\">
+
+    <a href=\"/horairesTarifs\" class=\"mt-3\">Consultez les horaires et les tarifs <i class=\"far fa-clock fa-lg\"></i></a>
+
+    <div class=\"col-md-8 mx-auto mt-3\">
         <h1>Faites votre réservation</h1>
         <hr class=\"py-3\">
 
         <div class=\"d-flex justify-content-center\">
             <div class=\"col-md-6 mb-3\">
                 <div class=\"form-check\">
-                    <input class=\"form-check-input\" type=\"radio\" name=\"exampleRadios\" id=\"\" value=\"option1\"  checked>
+                    <input class=\"form-check-input\" type=\"radio\" name=\"exampleRadios\" id=\"CheckAllerSimple\" value=\"\"
+                        onclick=\"AllerSimple()\" checked>
                     <label class=\"form-check-label\" for=\"\">
                         Aller simple <i class=\"fas fa-arrow-right\"></i>
                     </label>
@@ -403,13 +523,125 @@ class __TwigTemplate_2f84f8aa3f015faee8275ca917d1e57fdc19bad9979150d4800261b83a8
             </div>
             <div class=\"col-md-6 mb-3\">
                 <div class=\"form-check\">
-                    <input class=\"form-check-input\" type=\"radio\" name=\"exampleRadios\" id=\"CheckAllerRetour\" value=\"option1\" onclick=\"AllerRetour()\">
+                    <input class=\"form-check-input\" type=\"radio\" name=\"exampleRadios\" id=\"CheckAllerRetour\" value=\"\"
+                        onclick=\"AllerRetour()\">
                     <label class=\"form-check-label\" for=\"\">
                         Aller / retour <i class=\"fas fa-arrows-alt-h\"></i>
                     </label>
                 </div>
             </div>
         </div>
+
+        <div style=\"display: none;\" id=\"FormAllerSimple\">
+            <form class=\"needs-validation\" novalidate>
+
+                <div class=\"d-flex justify-content-center\">
+                    <div class=\"col-md-6 mb-3\">
+                        <div>
+                            <label for=\"\">Départ</label>
+                            <select class=\"form-control\" style=\"text-align:center;\">
+                                <option value=\"1\">Strasbourg</option>
+                                <option value=\"2\">Bruxelle</option>
+                                <option value=\"3\">3</option>
+                                <option value=\"4\">4</option>
+                                <option value=\"5\">5</option>
+                                <option value=\"6\">6</option>
+                                <option value=\"7\">7</option>
+                                <option value=\"8\">8</option>
+                            </select>
+                            <div class=\"invalid-feedback\">
+                                Please choose a number.
+                            </div>
+                        </div>
+                    </div>
+                    <div class=\"col-md-6 mb-3\">
+                        <div>
+                            <label for=\"\">Destination</label>
+                            <select class=\"form-control\" required>
+                                <option value=\"1\">Strasbourg</option>
+                                <option value=\"2\">2</option>
+                                <option value=\"3\">3</option>
+                                <option value=\"4\">4</option>
+                                <option value=\"5\">5</option>
+                                <option value=\"6\">6</option>
+                                <option value=\"7\">7</option>
+                                <option value=\"8\">8</option>
+                            </select>
+                            <div class=\"invalid-feedback\">
+                                Please choose a number.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <hr>
+
+                <div>
+
+                </div>
+                <div class=\"d-flex justify-content-center\">
+                    <div class=\"col-md-6 mb-3\">
+                        <div>
+                            <label for=\"\">Nombre de Passager</label>
+                            <select class=\"form-control\" required>
+                                <option value=\"1\">1</option>
+                                <option value=\"2\">2</option>
+                                <option value=\"3\">3</option>
+                                <option value=\"4\">4</option>
+                                <option value=\"5\">5</option>
+                                <option value=\"6\">6</option>
+                                <option value=\"7\">7</option>
+                                <option value=\"8\">8</option>
+                            </select>
+                            <div class=\"invalid-feedback\">
+                                Please choose a number.
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+
+
+                <div class=\"d-flex justify-content-center\">
+                    <div class=\"col-md-6 mb-3\">
+                        <div class=\"form-group\">
+                            <label for=\"\">Date de départ</label>
+                            <input type=\"date\" class=\"form-control\" required>
+                        </div>
+                        <div class=\"invalid-feedback\">
+                            Please choose a number.
+                        </div>
+                    </div>
+                </div>
+                <div class=\"d-flex justify-content-center\">
+                    <div class=\"col-md-6 mb-3\">
+                        <div class=\"form-group\">
+                            <label for=\"\">Horaires de départ fixées par la société</label>
+                            <select class=\"form-control\">
+                                <option value=\"1\">HEURE</option>
+                                <option value=\"2\">2</option>
+                                <option value=\"3\">3</option>
+                                <option value=\"4\">4</option>
+                                <option value=\"5\">5</option>
+                                <option value=\"6\">6</option>
+                                <option value=\"7\">7</option>
+                                <option value=\"8\">8</option>
+                            </select>
+                        </div>
+                        <div class=\"invalid-feedback\">
+                            Please choose a number.
+                        </div>
+                    </div>
+                </div>
+                <button class=\"btn btn-primary\" type=\"submit\">Réserver !</button>
+            </form>
+        </div>
+
+
+
+
+
 
         <div style=\"display: none;\" id=\"FormAllerRetour\">
             <form class=\"needs-validation\" novalidate>
@@ -560,10 +792,10 @@ class __TwigTemplate_2f84f8aa3f015faee8275ca917d1e57fdc19bad9979150d4800261b83a8
                         </div>
                     </div>
                 </div>
-
+                <button class=\"btn btn-primary\" type=\"submit\">Réserver !</button>
+            </form>
         </div>
-        <button class=\"btn btn-primary\" type=\"submit\">Réserver !</button>
-        </form>
+
     </div>
 
 

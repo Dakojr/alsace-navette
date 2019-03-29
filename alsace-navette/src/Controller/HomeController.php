@@ -26,4 +26,14 @@ class HomeController extends AbstractController
             'controller_name' => 'HomeController',
         ]);
     }
+
+    /**
+     * @Route("/horairesTarifs", name="horairesTarifs")
+     */
+    public function aeroportRouteHorairesTarifs()
+    {
+        return $this->render('aeroport/horairesTarifs.html.twig', [
+            'controller_name' => 'HomeController',
+        ]);
+    }
 }
