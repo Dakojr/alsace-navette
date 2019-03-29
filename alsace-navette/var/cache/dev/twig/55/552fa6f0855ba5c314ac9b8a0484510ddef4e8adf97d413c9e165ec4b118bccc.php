@@ -190,7 +190,10 @@ class __TwigTemplate_736e632945d8cb0df8b5730309410a1ee82171209e8e43cb5033059c05d
                     <div class=\"invalid-feedback\">
                         Veuillez renseigné un e-mail.
                     </div>
-                    <a href=\"#\" data-dismiss=\"modal\" data-toggle=\"modal\" data-target=\"#inscriptionModal\" onclick=\"Registration()\"><label
+                    <a href=\"";
+        // line 139
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("security_registration");
+        echo "\"><label
                             style=\"cursor: pointer;\" for=\"\" class=\"text-center col-12 mt-2\">Inscription</label></a>
                 </div>
                 <div class=\"modal-footer\">
@@ -330,9 +333,14 @@ class __TwigTemplate_736e632945d8cb0df8b5730309410a1ee82171209e8e43cb5033059c05d
         return "base.html.twig";
     }
 
+    public function isTraitable()
+    {
+        return false;
+    }
+
     public function getDebugInfo()
     {
-        return array (  315 => 156,  306 => 155,  296 => 62,  287 => 61,  276 => 18,  267 => 17,  249 => 7,  232 => 5,  213 => 161,  211 => 155,  117 => 63,  115 => 61,  72 => 20,  70 => 17,  57 => 7,  54 => 6,  52 => 5,  46 => 1,);
+        return array (  318 => 156,  309 => 155,  299 => 62,  290 => 61,  279 => 18,  270 => 17,  252 => 7,  235 => 5,  216 => 161,  214 => 155,  195 => 139,  117 => 63,  115 => 61,  72 => 20,  70 => 17,  57 => 7,  54 => 6,  52 => 5,  46 => 1,);
     }
 
     public function getSourceContext()
@@ -475,7 +483,7 @@ class __TwigTemplate_736e632945d8cb0df8b5730309410a1ee82171209e8e43cb5033059c05d
                     <div class=\"invalid-feedback\">
                         Veuillez renseigné un e-mail.
                     </div>
-                    <a href=\"#\" data-dismiss=\"modal\" data-toggle=\"modal\" data-target=\"#inscriptionModal\" onclick=\"Registration()\"><label
+                    <a href=\"{{ path('security_registration')}}\"><label
                             style=\"cursor: pointer;\" for=\"\" class=\"text-center col-12 mt-2\">Inscription</label></a>
                 </div>
                 <div class=\"modal-footer\">
