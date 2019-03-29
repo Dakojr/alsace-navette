@@ -23,10 +23,16 @@ class __TwigTemplate_db55d99e3c9be9026a59f2c8ee57f4d0617e2cc550389d3cb3d4c43e933
 
         $this->source = $this->getSourceContext();
 
-        $this->parent = false;
-
+        // line 1
+        $this->parent = $this->loadTemplate("base.html.twig", "security/registration.html.twig", 1);
         $this->blocks = [
+            'body' => [$this, 'block_body'],
         ];
+    }
+
+    protected function doGetParent(array $context)
+    {
+        return "base.html.twig";
     }
 
     protected function doDisplay(array $context, array $blocks = [])
@@ -37,65 +43,189 @@ class __TwigTemplate_db55d99e3c9be9026a59f2c8ee57f4d0617e2cc550389d3cb3d4c43e933
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "template", "security/registration.html.twig"));
 
-        // line 1
-        echo "    <h1>Registration</h1>
-    ";
-        // line 2
-        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 2, $this->source); })()), 'form_start');
-        echo "
-        ";
-        // line 3
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 3, $this->source); })()), "civilite", []), 'row', ["label" => "Civilite", "attr" => ["placeholder" => "Mr, M, Mme..."]]);
-        echo "
-        ";
-        // line 4
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 4, $this->source); })()), "nom", []), 'row', ["label" => "Nom", "attr" => ["placeholder" => "Nom..."]]);
-        echo "
-        ";
-        // line 5
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 5, $this->source); })()), "prenom", []), 'row', ["label" => "Prenom", "attr" => ["placeholder" => "Prenom..."]]);
-        echo "
-        ";
-        // line 6
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 6, $this->source); })()), "codepostal", []), 'row', ["label" => "Codepostal", "attr" => ["placeholder" => "Codepostal..."]]);
-        echo "
-        ";
-        // line 7
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 7, $this->source); })()), "email", []), 'row', ["label" => "Email", "attr" => ["placeholder" => "Email..."]]);
-        echo "
-        ";
-        // line 8
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 8, $this->source); })()), "ville", []), 'row', ["label" => "Ville", "attr" => ["placeholder" => "Ville..."]]);
-        echo "
-        ";
-        // line 9
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 9, $this->source); })()), "telfixe", []), 'row', ["label" => "Telephone fixe", "attr" => ["placeholder" => "Telephone fixe..."]]);
-        echo "
-        ";
-        // line 10
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 10, $this->source); })()), "telportable", []), 'row', ["label" => "Telephone Portable", "attr" => ["placeholder" => "Telephone Portable..."]]);
-        echo "
-        ";
-        // line 11
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 11, $this->source); })()), "password", []), 'row', ["label" => "Mot de passe", "attr" => ["placeholder" => "Mot de passe..."]]);
-        echo "
-        ";
-        // line 12
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 12, $this->source); })()), "professionnel", []), 'row', ["label" => "Professionnel"]);
-        echo "
-        ";
-        // line 13
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 13, $this->source); })()), "nomsociete", []), 'row', ["label" => "Nom de votre societe", "attr" => ["placeholder" => "Nom de votre societe..."]]);
-        echo "
-        <button type=\"submit\" class=\"btn btn-primary\">Submit</button>
-    ";
-        // line 15
-        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 15, $this->source); })()), 'form_end');
+        $this->parent->display($context, array_merge($this->blocks, $blocks));
         
         $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e->leave($__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e_prof);
 
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
+
+    }
+
+    // line 2
+    public function block_body($context, array $blocks = [])
+    {
+        $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e = $this->extensions["Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension"];
+        $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e->enter($__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "body"));
+
+        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
+        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "body"));
+
+        // line 3
+        echo "                ";
+        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 3, $this->source); })()), 'form_start');
+        echo "
+
+                <div class=\"d-flex justify-content-center\">
+
+                    <div class=\"d-flex justify-content-center\">
+                        <div>
+                            <label for=\"email\" class=\"text-center col-12 mt-2\">Civilité</label>
+                            ";
+        // line 10
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 10, $this->source); })()), "civilite", []), 'row', ["attr" => ["class" => "form-control"]]);
+        echo "
+
+                            <div class=\"invalid-feedback\">
+                                Veuillez renseigné un e-mail.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class=\"invalid-feedback\">
+                    Veuillez renseigné une civilité.
+                </div>
+                <hr>
+                <div class=\"d-flex justify-content-around\">
+                    <div>
+                        <label for=\"nom\" class=\"text-center col-12 mt-2\">Nom</label>
+
+                        ";
+        // line 26
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 26, $this->source); })()), "nom", []), 'row', ["attr" => ["class" => "form-control", "placeholder" => "Nom..."]]);
+        echo "
+
+                        <div class=\"invalid-feedback\">
+                            Veuillez renseigné un nom.
+                        </div>
+                    </div>
+                    <div>
+                        <label for=\"prenom\" class=\"text-center col-12 mt-2\">Prénom</label>
+                        ";
+        // line 34
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 34, $this->source); })()), "prenom", []), 'row', ["attr" => ["class" => "form-control", "placeholder" => "Prenom..."]]);
+        echo "
+
+                        <div class=\"invalid-feedback\">
+                            Veuillez renseigné un prénom.
+                        </div>
+                    </div>
+                </div>
+                <div class=\"d-flex justify-content-center\">
+                    <div>
+                        <label for=\"email\" class=\"text-center col-12 mt-2\">E-mail</label>
+                        ";
+        // line 44
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 44, $this->source); })()), "email", []), 'row', ["attr" => ["class" => "form-control", "placeholder" => "Email..."]]);
+        echo "
+
+                        <div class=\"invalid-feedback\">
+                            Veuillez renseigné un e-mail.
+                        </div>
+                    </div>
+                </div>
+                <div class=\"d-flex justify-content-center\">
+                    <div>
+
+                        <label for=\"password\" class=\"text-center col-12 mt-2\">Mot de Passe</label>
+                        ";
+        // line 55
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 55, $this->source); })()), "password", []), 'row', ["attr" => ["class" => "form-control", "placeholder" => "Mot de passe..."]]);
+        echo "
+
+
+                        <div class=\"invalid-feedback\">
+                            Veuillez renseigné un mot de passe.
+                        </div>
+                    </div>
+                </div>
+                <div class=\"d-flex justify-content-center\">
+                    <div>
+                        <label for=\"password\" class=\"text-center col-12 mt-2\">Confirmaton</label>
+                        ";
+        // line 66
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 66, $this->source); })()), "password", []), 'row', ["attr" => ["class" => "form-control", "placeholder" => "Mot de passe..."]]);
+        echo "
+
+                        <div class=\"invalid-feedback\">
+                            Veuillez renseigné un mot de passe.
+                        </div>
+                    </div>
+                </div>
+                <div class=\"d-flex justify-content-around\">
+                    <div>
+                        <label for=\"cp\" class=\"text-center col-12 mt-2\">Code Postal</label>
+                        ";
+        // line 76
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 76, $this->source); })()), "codepostal", []), 'row', ["attr" => ["class" => "form-control", "placeholder" => "Code postale..."]]);
+        echo "
+
+                        <div class=\"invalid-feedback\">
+                            Veuillez renseigné un code postal.
+                        </div>
+                    </div>
+                    <div>
+                        <label for=\"ville\" class=\"text-center col-12 mt-2\">Ville</label>
+                        ";
+        // line 84
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 84, $this->source); })()), "ville", []), 'row', ["attr" => ["class" => "form-control", "placeholder" => "Ville..."]]);
+        echo "
+
+                        <div class=\"invalid-feedback\">
+                            Veuillez renseigné une ville.
+                        </div>
+                    </div>
+                </div>
+                <div class=\"d-flex justify-content-center\">
+                    <div>
+                        <label for=\"telephone\" class=\"text-center col-12 mt-2\">Telephone</label>
+                        ";
+        // line 94
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 94, $this->source); })()), "telportable", []), 'row', ["attr" => ["class" => "form-control", "placeholder" => "telephone..."]]);
+        echo "
+
+                        <div class=\"invalid-feedback\">
+                            Veuillez renseigné un numéro de téléphone.
+                        </div>
+                    </div>
+                </div>
+                <div class=\"d-flex justify-content-center\">
+                    <div>
+                        <div class=\"form-check\">
+                            ";
+        // line 104
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 104, $this->source); })()), "professionnel", []), 'row', ["id" => "CheckPro", "attr" => ["class" => "form-check-input", "onclick" => "Prochecked()"]]);
+        echo "
+                            <label class=\"form-check-label\" for=\"CheckPro\">
+                                Professionel ?
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <div class=\"d-flex justify-content-center\">
+                    <div style=\"display:none\" id=\"InputPro\">
+                        <label for=\"telephone\" class=\"text-center col-12 mt-2\">Nom de la société</label>
+                        ";
+        // line 114
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 114, $this->source); })()), "nomsociete", []), 'row', ["attr" => ["class" => "form-control", "placeholder" => "Nom de la société..."]]);
+        echo "
+                        <div class=\"invalid-feedback\">
+                            Veuillez renseigné un nom de société
+                        </div>
+                    </div>
+                </div>
+                    <button type=\"submit\" class=\"btn btn-primary\">Inscription</button>
+                ";
+        // line 121
+        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 121, $this->source); })()), 'form_end');
+        echo "
+            </div>
+";
+        
+        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
+
+        
+        $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e->leave($__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e_prof);
 
     }
 
@@ -111,25 +241,133 @@ class __TwigTemplate_db55d99e3c9be9026a59f2c8ee57f4d0617e2cc550389d3cb3d4c43e933
 
     public function getDebugInfo()
     {
-        return array (  93 => 15,  88 => 13,  84 => 12,  80 => 11,  76 => 10,  72 => 9,  68 => 8,  64 => 7,  60 => 6,  56 => 5,  52 => 4,  48 => 3,  44 => 2,  41 => 1,);
+        return array (  220 => 121,  210 => 114,  197 => 104,  184 => 94,  171 => 84,  160 => 76,  147 => 66,  133 => 55,  119 => 44,  106 => 34,  95 => 26,  76 => 10,  65 => 3,  56 => 2,  27 => 1,);
     }
 
     public function getSourceContext()
     {
-        return new Source("    <h1>Registration</h1>
-    {{ form_start(form) }}
-        {{ form_row(form.civilite, {'label': 'Civilite', 'attr':{'placeholder':'Mr, M, Mme...'}}) }}
-        {{ form_row(form.nom, {'label': 'Nom', 'attr':{'placeholder':'Nom...'}}) }}
-        {{ form_row(form.prenom, {'label': 'Prenom', 'attr':{'placeholder':'Prenom...'}}) }}
-        {{ form_row(form.codepostal, {'label': 'Codepostal', 'attr':{'placeholder':'Codepostal...'}}) }}
-        {{ form_row(form.email, {'label': 'Email', 'attr':{'placeholder':'Email...'}}) }}
-        {{ form_row(form.ville, {'label': 'Ville', 'attr':{'placeholder':'Ville...'}}) }}
-        {{ form_row(form.telfixe, {'label': 'Telephone fixe', 'attr':{'placeholder':'Telephone fixe...'}}) }}
-        {{ form_row(form.telportable, {'label': 'Telephone Portable', 'attr':{'placeholder':'Telephone Portable...'}}) }}
-        {{ form_row(form.password, {'label': 'Mot de passe', 'attr':{'placeholder':'Mot de passe...'}}) }}
-        {{ form_row(form.professionnel, {'label': 'Professionnel'}) }}
-        {{ form_row(form.nomsociete, {'label': 'Nom de votre societe', 'attr':{'placeholder':'Nom de votre societe...'}}) }}
-        <button type=\"submit\" class=\"btn btn-primary\">Submit</button>
-    {{ form_end(form) }}", "security/registration.html.twig", "C:\\wamp64\\www\\git\\alsace-navette\\templates\\security\\registration.html.twig");
+        return new Source("{% extends 'base.html.twig' %}
+{% block body %}
+                {{ form_start(form) }}
+
+                <div class=\"d-flex justify-content-center\">
+
+                    <div class=\"d-flex justify-content-center\">
+                        <div>
+                            <label for=\"email\" class=\"text-center col-12 mt-2\">Civilité</label>
+                            {{ form_row(form.civilite, { 'attr' : { 'class': 'form-control'} }) }}
+
+                            <div class=\"invalid-feedback\">
+                                Veuillez renseigné un e-mail.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class=\"invalid-feedback\">
+                    Veuillez renseigné une civilité.
+                </div>
+                <hr>
+                <div class=\"d-flex justify-content-around\">
+                    <div>
+                        <label for=\"nom\" class=\"text-center col-12 mt-2\">Nom</label>
+
+                        {{ form_row(form.nom, { 'attr' : { 'class': 'form-control' , 'placeholder':'Nom...'} }) }}
+
+                        <div class=\"invalid-feedback\">
+                            Veuillez renseigné un nom.
+                        </div>
+                    </div>
+                    <div>
+                        <label for=\"prenom\" class=\"text-center col-12 mt-2\">Prénom</label>
+                        {{ form_row(form.prenom, { 'attr' : { 'class': 'form-control' , 'placeholder':'Prenom...'} }) }}
+
+                        <div class=\"invalid-feedback\">
+                            Veuillez renseigné un prénom.
+                        </div>
+                    </div>
+                </div>
+                <div class=\"d-flex justify-content-center\">
+                    <div>
+                        <label for=\"email\" class=\"text-center col-12 mt-2\">E-mail</label>
+                        {{ form_row(form.email, { 'attr' : { 'class': 'form-control' , 'placeholder':'Email...'} }) }}
+
+                        <div class=\"invalid-feedback\">
+                            Veuillez renseigné un e-mail.
+                        </div>
+                    </div>
+                </div>
+                <div class=\"d-flex justify-content-center\">
+                    <div>
+
+                        <label for=\"password\" class=\"text-center col-12 mt-2\">Mot de Passe</label>
+                        {{ form_row(form.password, { 'attr' : { 'class': 'form-control' , 'placeholder':'Mot de passe...'} }) }}
+
+
+                        <div class=\"invalid-feedback\">
+                            Veuillez renseigné un mot de passe.
+                        </div>
+                    </div>
+                </div>
+                <div class=\"d-flex justify-content-center\">
+                    <div>
+                        <label for=\"password\" class=\"text-center col-12 mt-2\">Confirmaton</label>
+                        {{ form_row(form.password, { 'attr' : { 'class': 'form-control' , 'placeholder':'Mot de passe...'} }) }}
+
+                        <div class=\"invalid-feedback\">
+                            Veuillez renseigné un mot de passe.
+                        </div>
+                    </div>
+                </div>
+                <div class=\"d-flex justify-content-around\">
+                    <div>
+                        <label for=\"cp\" class=\"text-center col-12 mt-2\">Code Postal</label>
+                        {{ form_row(form.codepostal, { 'attr' : { 'class': 'form-control' , 'placeholder':'Code postale...'} }) }}
+
+                        <div class=\"invalid-feedback\">
+                            Veuillez renseigné un code postal.
+                        </div>
+                    </div>
+                    <div>
+                        <label for=\"ville\" class=\"text-center col-12 mt-2\">Ville</label>
+                        {{ form_row(form.ville, { 'attr' : { 'class': 'form-control' , 'placeholder':'Ville...'} }) }}
+
+                        <div class=\"invalid-feedback\">
+                            Veuillez renseigné une ville.
+                        </div>
+                    </div>
+                </div>
+                <div class=\"d-flex justify-content-center\">
+                    <div>
+                        <label for=\"telephone\" class=\"text-center col-12 mt-2\">Telephone</label>
+                        {{ form_row(form.telportable, { 'attr' : { 'class': 'form-control' , 'placeholder':'telephone...'} }) }}
+
+                        <div class=\"invalid-feedback\">
+                            Veuillez renseigné un numéro de téléphone.
+                        </div>
+                    </div>
+                </div>
+                <div class=\"d-flex justify-content-center\">
+                    <div>
+                        <div class=\"form-check\">
+                            {{ form_row(form.professionnel, { 'id' : 'CheckPro' ,'attr' : { 'class': 'form-check-input', 'onclick': 'Prochecked()' } }) }}
+                            <label class=\"form-check-label\" for=\"CheckPro\">
+                                Professionel ?
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <div class=\"d-flex justify-content-center\">
+                    <div style=\"display:none\" id=\"InputPro\">
+                        <label for=\"telephone\" class=\"text-center col-12 mt-2\">Nom de la société</label>
+                        {{ form_row(form.nomsociete, { 'attr' : { 'class': 'form-control', 'placeholder': 'Nom de la société...' } }) }}
+                        <div class=\"invalid-feedback\">
+                            Veuillez renseigné un nom de société
+                        </div>
+                    </div>
+                </div>
+                    <button type=\"submit\" class=\"btn btn-primary\">Inscription</button>
+                {{ form_end(form) }}
+            </div>
+{% endblock %}", "security/registration.html.twig", "C:\\wamp64\\www\\alsace-nav\\alsace-navette\\templates\\security\\registration.html.twig");
     }
 }

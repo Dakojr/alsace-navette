@@ -210,6 +210,6 @@ class __TwigTemplate_1168ceed2495cdc36567799320916a9fefadfd6146f5cef2ef217a2d41c
     {% endfor %}
     </tbody>
 </table>
-", "@Twig/Exception/logs.html.twig", "C:\\wamp64\\www\\git\\alsace-navette\\vendor\\symfony\\twig-bundle\\Resources\\views\\Exception\\logs.html.twig");
+", "@Twig/Exception/logs.html.twig", "C:\\wamp64\\www\\alsace-nav\\alsace-navette\\vendor\\symfony\\twig-bundle\\Resources\\views\\Exception\\logs.html.twig");
     }
 }

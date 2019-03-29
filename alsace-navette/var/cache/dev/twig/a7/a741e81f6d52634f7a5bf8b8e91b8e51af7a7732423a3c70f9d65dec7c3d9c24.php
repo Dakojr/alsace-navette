@@ -477,6 +477,6 @@ class __TwigTemplate_8f6242273fb1f53dacd5ffa61e19a28030f952f88deca5c0d6fca9b9ea9
         {% endfor %}
     </table>
 {% endmacro %}
-", "@WebProfiler/Collector/events.html.twig", "C:\\wamp64\\www\\git\\alsace-navette\\vendor\\symfony\\web-profiler-bundle\\Resources\\views\\Collector\\events.html.twig");
+", "@WebProfiler/Collector/events.html.twig", "C:\\wamp64\\www\\alsace-nav\\alsace-navette\\vendor\\symfony\\web-profiler-bundle\\Resources\\views\\Collector\\events.html.twig");
     }
 }

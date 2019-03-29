@@ -187,6 +187,6 @@ class __TwigTemplate_64e1cf09db6f6c6d72ab44055930327c98a0dbde7b61167ff5ad9f9e520
         </div>
     </div>
 </div>
-", "@Twig/Exception/traces.html.twig", "C:\\wamp64\\www\\git\\alsace-navette\\vendor\\symfony\\twig-bundle\\Resources\\views\\Exception\\traces.html.twig");
+", "@Twig/Exception/traces.html.twig", "C:\\wamp64\\www\\alsace-nav\\alsace-navette\\vendor\\symfony\\twig-bundle\\Resources\\views\\Exception\\traces.html.twig");
     }
 }

@@ -1,15 +1,5 @@
-<div class="modal fade" id="registrationModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
-    aria-hidden="true" data-backdrop="static" data-keyboard="false">
-    <div class="modal-dialog modal-dialog-centered" role="document">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title text-center" id="exampleModalLongTitle">Inscription</h5>
-                <button type="button" onClick="RemoveChild()" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-            <div class="modal-body">
-
+{% extends 'base.html.twig' %}
+{% block body %}
                 {{ form_start(form) }}
 
                 <div class="d-flex justify-content-center">
@@ -127,17 +117,7 @@
                         </div>
                     </div>
                 </div>
-
-                <a href="#" data-toggle="modal" data-dismiss="modal" data-target="#connexionModal"><label
-                        style="cursor: pointer;" for="" class="text-center col-12 mt-2">Connexion</label></a>
-
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal"
-                        onClick="RemoveChild()">Close</button>
                     <button type="submit" class="btn btn-primary">Inscription</button>
-                </div>
+                {{ form_end(form) }}
             </div>
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-        </div>
-    </div>
-</div>
+{% endblock %}
