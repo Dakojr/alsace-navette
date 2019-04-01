@@ -103,7 +103,7 @@ class __TwigTemplate_736e632945d8cb0df8b5730309410a1ee82171209e8e43cb5033059c05d
                     <a class=\"nav-link\" href=\"#\">Royal Palace</a>
                 </li>
                 <li class=\"nav-item\">
-                    <a class=\"nav-link\" data-toggle=\"modal\" data-target=\"#connexionModal\" href=\"#\"><i
+                    <a class=\"nav-link\" href=\"/login\"><i
                             class=\"fas fa-user fa-lg\"></i></a>
                 </li>
             </ul>
@@ -398,7 +398,7 @@ class __TwigTemplate_736e632945d8cb0df8b5730309410a1ee82171209e8e43cb5033059c05d
                     <a class=\"nav-link\" href=\"#\">Royal Palace</a>
                 </li>
                 <li class=\"nav-item\">
-                    <a class=\"nav-link\" data-toggle=\"modal\" data-target=\"#connexionModal\" href=\"#\"><i
+                    <a class=\"nav-link\" href=\"/login\"><i
                             class=\"fas fa-user fa-lg\"></i></a>
                 </li>
             </ul>
