@@ -126,7 +126,7 @@ class __TwigTemplate_2f84f8aa3f015faee8275ca917d1e57fdc19bad9979150d4800261b83a8
             <div class=\"col-md-6 mb-3\">
                 <div class=\"form-check\">
                     <input class=\"form-check-input\" type=\"radio\" name=\"exampleRadios\" id=\"CheckAllerSimple\" value=\"\"
-                        onclick=\"AllerSimple()\" checked>
+                        onclick=\"AllerSimple()\">
                     <label class=\"form-check-label\" for=\"\">
                         Aller simple <i class=\"fas fa-arrow-right\"></i>
                     </label>
@@ -515,7 +515,7 @@ class __TwigTemplate_2f84f8aa3f015faee8275ca917d1e57fdc19bad9979150d4800261b83a8
             <div class=\"col-md-6 mb-3\">
                 <div class=\"form-check\">
                     <input class=\"form-check-input\" type=\"radio\" name=\"exampleRadios\" id=\"CheckAllerSimple\" value=\"\"
-                        onclick=\"AllerSimple()\" checked>
+                        onclick=\"AllerSimple()\">
                     <label class=\"form-check-label\" for=\"\">
                         Aller simple <i class=\"fas fa-arrow-right\"></i>
                     </label>
