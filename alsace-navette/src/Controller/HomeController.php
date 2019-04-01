@@ -36,4 +36,13 @@ class HomeController extends AbstractController
             'controller_name' => 'HomeController',
         ]);
     }
+
+    /**
+     * @Route("/infoDestination", name="infoDestination")
+     */
+    public function infoDestination()
+    {
+        return $this->json(['username' => 'amine']);
+    }
+
 }
