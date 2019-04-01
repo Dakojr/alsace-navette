@@ -48,13 +48,12 @@
         </div>
 
         <div style="display: none;" id="FormAllerSimple">
-            <form class="needs-validation" novalidate>
-
+            <form class="needs-validation" name="formReservation" method="get" action="{{ path('reservationAller')}}" novalidate>
                 <div class="d-flex justify-content-center">
                     <div class="col-md-6 mb-3">
                         <div>
                             <label for="">Départ</label>
-                            <select class="form-control" style="text-align:center;">
+                            <select class="form-control" style="text-align:center;" name="depart_aller">
                                 <option value="1">Strasbourg</option>
                                 <option value="2">Bruxelle</option>
                                 <option value="3">3</option>
@@ -72,7 +71,7 @@
                     <div class="col-md-6 mb-3">
                         <div>
                             <label for="">Destination</label>
-                            <select class="form-control" required>
+                            <select class="form-control" name="destination_aller"required>
                                 <option value="1">Strasbourg</option>
                                 <option value="2">2</option>
                                 <option value="3">3</option>
@@ -99,7 +98,7 @@
                     <div class="col-md-6 mb-3">
                         <div>
                             <label for="">Nombre de Passager</label>
-                            <select class="form-control" required>
+                            <select class="form-control" id="nb_passager_aller" name="nb_passager_aller" required>
                                 <option value="1">1</option>
                                 <option value="2">2</option>
                                 <option value="3">3</option>
@@ -122,7 +121,7 @@
                     <div class="col-md-6 mb-3">
                         <div class="form-group">
                             <label for="">Date de départ</label>
-                            <input type="date" class="form-control" required>
+                            <input type="date" class="form-control" name="date_depart_aller" required>
                         </div>
                         <div class="invalid-feedback">
                             Please choose a number.
@@ -133,7 +132,7 @@
                     <div class="col-md-6 mb-3">
                         <div class="form-group">
                             <label for="">Horaires de départ fixées par la société</label>
-                            <select class="form-control">
+                            <select class="form-control" name="horraire_depart_aller">
                                 <option value="1">HEURE</option>
                                 <option value="2">2</option>
                                 <option value="3">3</option>
@@ -159,15 +158,15 @@
 
 
         <div style="display: none;" id="FormAllerRetour">
-            <form class="needs-validation" novalidate>
+            <form class="needs-validation" method="get" action="{{ path('reservation')}}" novalidate>
 
                 <div class="d-flex justify-content-center">
                     <div class="col-md-6 mb-3">
                         <div>
                             <label for="">Départ</label>
-                            <select class="form-control" style="text-align:center;">
-                                <option value="1">Strasbourg</option>
-                                <option value="2">Bruxelle</option>
+                            <select class="form-control" name="depart" style="text-align:center;">
+                                <option value="Strasbourg">Strasbourg</option>
+                                <option value="Bruxelle">Bruxelle</option>
                                 <option value="3">3</option>
                                 <option value="4">4</option>
                                 <option value="5">5</option>
@@ -183,9 +182,9 @@
                     <div class="col-md-6 mb-3">
                         <div>
                             <label for="">Destination</label>
-                            <select class="form-control" required>
-                                <option value="1">Strasbourg</option>
-                                <option value="2">2</option>
+                            <select class="form-control" name="destinaton" required>
+                                <option value="Strasbourg">Strasbourg</option>
+                                <option value="Bruxelle">Bruxelle0</option>
                                 <option value="3">3</option>
                                 <option value="4">4</option>
                                 <option value="5">5</option>
@@ -210,7 +209,7 @@
                     <div class="col-md-4 mb-3">
                         <div>
                             <label for="">Nombre de Passager</label>
-                            <select class="form-control" required>
+                            <select class="form-control" name="nb_passager_1" required>
                                 <option value="1">1</option>
                                 <option value="2">2</option>
                                 <option value="3">3</option>
@@ -229,7 +228,7 @@
                     <div class="col-md-4 mb-3">
                         <div>
                             <label for="">Nombre de Passager</label>
-                            <select class="form-control" value="pareil" required>
+                            <select class="form-control" name="nb_passager_2" value="pareil" required>
                                 <option value="undefined">Pareil</option>
                                 <option value="1">1</option>
                                 <option value="2">2</option>
@@ -252,7 +251,7 @@
                     <div class="col-md-4 mb-3">
                         <div class="form-group">
                             <label for="">Date de départ</label>
-                            <input type="date" class="form-control" required>
+                            <input type="date" class="form-control" name="date_depart" required>
                         </div>
                         <div class="invalid-feedback">
                             Please choose a number.
@@ -262,7 +261,7 @@
                     <div class="col-md-4 mb-3">
                         <div class="form-group">
                             <label for="">Date de retour</label>
-                            <input type="date" class="form-control" required>
+                            <input type="date" class="form-control" name="date_retour" required>
                         </div>
                         <div class="invalid-feedback">
                             Please choose a number.
@@ -273,7 +272,7 @@
                     <div class="col-md-4 mb-3">
                         <div class="form-group">
                             <label for="">Horaires de départ fixées par la société</label>
-                            <select class="form-control">
+                            <select class="form-control" name="horraire_depart">
                                 <option value="1">HEURE</option>
                                 <option value="2">2</option>
                                 <option value="3">3</option>
@@ -291,7 +290,7 @@
                     <div class="col-md-4 mb-3">
                         <div class="form-group">
                             <label for="">Horaires de retour fixées par la société</label>
-                            <select class="form-control">
+                            <select class="form-control" name="horraire_retour">
                                 <option value="1">HEURE</option>
                                 <option value="2">2</option>
                                 <option value="3">3</option>

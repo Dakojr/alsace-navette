@@ -28,6 +28,16 @@ class Trajet
      */
     private $reservations;
 
+    /**
+     * @ORM\ManyToOne(targetEntity="App\Entity\vehicule")
+     */
+    private $vehicule;
+
+    /**
+     * @ORM\ManyToOne(targetEntity="App\Entity\chauffeur")
+     */
+    private $chauffeur;
+
     public function __construct()
     {
         $this->reservations = new ArrayCollection();
@@ -79,6 +89,30 @@ class Trajet
                 $reservation->setTrajet(null);
             }
         }
+
+        return $this;
+    }
+
+    public function getVehicule(): ?vehicule
+    {
+        return $this->vehicule;
+    }
+
+    public function setVehicule(?vehicule $vehicule): self
+    {
+        $this->vehicule = $vehicule;
+
+        return $this;
+    }
+
+    public function getChauffeur(): ?chauffeur
+    {
+        return $this->chauffeur;
+    }
+
+    public function setChauffeur(?chauffeur $chauffeur): self
+    {
+        $this->chauffeur = $chauffeur;
 
         return $this;
     }
