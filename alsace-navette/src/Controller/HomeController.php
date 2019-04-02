@@ -55,15 +55,26 @@ class HomeController extends AbstractController
         $destination = $req->get('destination_aller');
         $nb = $req->get('nb_passager_aller');
         $date_depart = $req->get('date_depart_aller');
-        $horraire_depart = $req->get('horraire_depart_aller');
+        $horraire_depart = $req->get('horraires_depart_aller');
+        $adresse = $req->get('adresse');
+        $pdp = $req->get('pdp_aller');
+        $cp = $req->get('cp_aller');
+        $pays = $req->get('pays_aller');
+
         
+        $depart_destination->setDepart($depart);
+        $depart_destination->setDestination($destination);
         
         $reservation->setNbPassager($nb);
         $reservation->setDateDepart($date_depart);
         $reservation->setHorraire($horraire_depart);
-
-        $depart_destination->setDepart($depart);
-        $depart_destination->setDestination($destination);
+        $reservation->setPointDePrise($pdp);
+        $reservation->setUser($this->getUser());
+        $reservation->setDepartDestination($depart_destination);
+        
+        $em->persist($depart_destination);
+        $em->persist($reservation);
+        $em->flush();
 
     }
     /**
@@ -76,19 +87,57 @@ class HomeController extends AbstractController
 
         $depart = $req->get('depart');
         $destination = $req->get('destination');
-        $nb = $req->get('nb_passager');
         $date_depart = $req->get('date_depart');
+        
         $nb_passager_aller = $req->get('nb_passager_1');
         $nb_passager_retour = $req->get('nb_passager_2');
+        $pdp = $req->get('pdp');
+        
         $date_depart = $req->get('date_depart');
         $date_retour = $req->get('date_retour');
-        $horraire_depart = $req->get('horraire_depart');
-        $horraire_retour = $req->get('horraire_retour');
-        $reservation->setNbPassager($nb);
+        
+        $horraire_depart = $req->get('horaire_depart');
+        $horraire_retour = $req->get('horaire_retour');
+        $adresse = $req->get('adresse');
+        $cp = $req->get('cp');
+        $ville = $req->get('ville');
+        $pays = $req->get('pays');
 
-        $depart_destination->setDepart($depart);
-        $depart_destination->setDestination($destination);
+        for ($i = 0; $i < 2; $i++){
+            if (!isset($tmp)){
+                $depart_destination->setDepart($depart);
+                $depart_destination->setDestination($destination);
 
+                $reservation->setNbPassager($nb_passager_aller);
+                $reservation->setDateDepart($date_depart);
+                $reservation->setHorraire($horraire_depart);
+                $reservation->setUser($this->getUser());
+                $reservation->setDepartDestination($depart_destination);
+
+                $em->persist($depart_destination);
+                $em->persist($reservation);
+                $em->flush();
+
+                $tmp = "ok";
+            }
+            else {
+                $depart_destination->setDepart($destination);
+                $depart_destination->setDestination($depart);
+                
+                $reservation->setNbPassager($nb_passager_retour);
+                $reservation->setDateDepart($date_retour);
+                $reservation->setHorraire($horraire_retour);
+                $reservation->setUser($this->getUser());
+                $reservation->setDepartDestination($depart_destination);
+
+                $em->persist($depart_destination);
+                $em->persist($reservation);
+                $em->flush();
+            }
+
+        }
+
+        
         return new Response($response);
     }
 }

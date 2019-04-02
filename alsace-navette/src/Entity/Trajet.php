@@ -29,12 +29,12 @@ class Trajet
     private $reservations;
 
     /**
-     * @ORM\ManyToOne(targetEntity="App\Entity\vehicule")
+     * @ORM\ManyToOne(targetEntity="App\Entity\Vehicule")
      */
     private $vehicule;
 
     /**
-     * @ORM\ManyToOne(targetEntity="App\Entity\chauffeur")
+     * @ORM\ManyToOne(targetEntity="App\Entity\Chauffeur")
      */
     private $chauffeur;
 
