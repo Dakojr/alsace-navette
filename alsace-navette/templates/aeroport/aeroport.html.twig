@@ -30,7 +30,7 @@
             <div class="col-md-6 mb-3">
                 <div class="form-check">
                     <input class="form-check-input" type="radio" name="exampleRadios" id="CheckAllerSimple" value=""
-                        onclick="AllerSimple()" checked>
+                        onclick="AllerSimple()">
                     <label class="form-check-label" for="">
                         Aller simple <i class="fas fa-arrow-right"></i>
                     </label>
@@ -113,7 +113,7 @@
                             </div>
                         </div>
                     </div>
-                    
+
                 </div>
 
 
@@ -148,14 +148,55 @@
                         </div>
                     </div>
                 </div>
-                <button class="btn btn-primary" type="submit">Réserver !</button>
+                <div class="d-flex justify-content-center">
+                    <div class="col-md-6 mb-3">
+                        <div class="form-group">
+                            <label for="">Point de prise</label>
+                            <select class="form-control" name="pdp_aller" onclick="Domicile()" id="pdp">
+                                <option value="Gare central">Gare central</option>
+                                <option value="Palais des droits de l'Homme">Palais des droits de l'Homme</option>
+                                <option value="Hotel Hilton">Hotel Hilton</option>
+                                <option value="Domicile">Domicile</option>
+                            </select>
+                        </div>
+                        <div class="invalid-feedback">
+                            Please choose a number.
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+                <div class="d-flex justify-content-center">
+
+
+                    <div id="domicile" class="col-md-6 mb-3" style="display: none;">
+
+                        <label for="firstName">Adresse</label>
+                        <input type="text" class="form-control"  placeholder="Adresse ..." name="adresse_aller">
+                        <label for="firstName" class="mt-3">Code Postal</label>
+                        <input type="text" class="form-control" placeholder="Code postal ..." name="cp_aller">
+                        <label for="firstName" class="mt-3">Ville</label>
+                        <input type="text" class="form-control"  placeholder="Ville ..." name="ville_aller">
+                        <label for="firstName" class="mt-3">Pays</label>
+                        <select class="form-control" name="pays_aller">
+                            <option value="France">France</option>
+                            <option value="Allemagne">Allemagne</option>
+                            <option value="Suisse">Suisse</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                            <option value="7">7</option>
+                            <option value="8">8</option>
+                        </select>
+
+                    </div>
+                </div>
+
+                <button class="btn btn-yellow" type="submit">Réserver !</button>
             </form>
         </div>
-
-
-
-
-
 
         <div style="display: none;" id="FormAllerRetour">
             <form class="needs-validation" method="get" action="{{ path('reservation')}}" novalidate>
@@ -304,9 +345,57 @@
                         <div class="invalid-feedback">
                             Please choose a number.
                         </div>
-                    </div>
+                    </div>                    
                 </div>
-                <button class="btn btn-primary" type="submit">Réserver !</button>
+
+
+
+                <div class="d-flex justify-content-center">
+                        <div class="col-md-6 mb-3">
+                            <div class="form-group">
+                                <label for="">Point de prise</label>
+                                <select class="form-control" name="pdp" onclick="DomicileAllerRetour()" id="pdp2">
+                                    <option value="Gare central">Gare central</option>
+                                    <option value="Palais des droits de l'Homme">Palais des droits de l'Homme</option>
+                                    <option value="Hotel Hilton">Hotel Hilton</option>
+                                    <option value="Domicile">Domicile</option>
+                                </select>
+                            </div>
+                            <div class="invalid-feedback">
+                                Please choose a number.
+                            </div>
+                        </div>
+                    </div>
+    
+    
+    
+    
+                    <div class="d-flex justify-content-center">
+    
+    
+                        <div id="domicile2" class="col-md-6 mb-3" style="display: none;">
+    
+                            <label for="firstName">Adresse</label>
+                            <input type="text" class="form-control" placeholder="Adresse..." name="adresse">
+                            <label for="firstName" class="mt-3">Code Postal</label>
+                            <input type="text" class="form-control"  placeholder="Ville..." name="cp">
+                            <label for="firstName" class="mt-3">Ville</label>
+                            <input type="text" class="form-control"  placeholder="Pays..." name="ville">
+                            <label for="firstName" class="mt-3">Pays</label>
+                            <select class="form-control" name="pays">
+                                <option value="France">France</option>
+                                <option value="Allemagne">Allemagne</option>
+                                <option value="Suisse">Suisse</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                                <option value="7">7</option>
+                                <option value="8">8</option>
+                            </select>
+    
+                        </div>
+                    </div>
+                <button class="btn btn-yellow" type="submit">Réserver !</button>
             </form>
         </div>
 

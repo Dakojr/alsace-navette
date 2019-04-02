@@ -29,3 +29,29 @@ function AllerSimple() {
         FormAllerRetour.style.display = "none";
     }
 }
+
+function Domicile() {
+    var domicile = document.getElementById('domicile')
+
+    let strUser = $("#pdp :selected").val();
+
+    if(strUser === "Domicile") {
+        domicile.style.display = "block";
+    } else {
+        domicile.style.display = "none";
+
+    }
+}   
+
+function DomicileAllerRetour() {
+    var domicile = document.getElementById('domicile2')
+
+    let strUser = $("#pdp2 :selected").val();
+
+    if(strUser === "Domicile") {
+        domicile.style.display = "block";
+    } else {
+        domicile.style.display = "none";
+
+    }
+}   

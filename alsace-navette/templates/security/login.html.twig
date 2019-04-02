@@ -1,5 +1,12 @@
 {% extends 'base.html.twig' %}
 {% block body %}
-    <h1>Login</h1>
+<div class="container mt-3">
+    <h1 class="text-center">Connexion</h1>
     {{form(formLogin)}}
+
+    <a href="{{ path('security_registration')}}"><label style="cursor: pointer;" for=""
+            class="text-center col-12 mt-2">Inscription</label></a>
+
+</div>
+
 {% endblock %}
