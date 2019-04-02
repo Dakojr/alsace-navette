@@ -63,16 +63,18 @@ class HomeController extends AbstractController
         $depart = $req->get('depart_aller');
         $destination = $req->get('destination_aller');
         $nb = $req->get('nb_passager_aller');
-        $date_depart = $req->get('date_depart_aller');
-        $horraire_depart = $req->get('horraires_depart_aller');
+        $date_depart = new \DateTime($req->get('date_depart_aller'));
+        $horraire_depart = $req->get('horraire_depart_aller');
         $adresse = $req->get('adresse');
         $pdp = $req->get('pdp_aller');
         $cp = $req->get('cp_aller');
+        $ville = $req->get('ville_aller');
         $pays = $req->get('pays_aller');
 
         
         $depart_destination->setDepart($depart);
         $depart_destination->setDestination($destination);
+        
         
         $reservation->setNbPassager($nb);
         $reservation->setDateDepart($date_depart);
@@ -84,6 +86,8 @@ class HomeController extends AbstractController
         $em->persist($depart_destination);
         $em->persist($reservation);
         $em->flush();
+        
+        return $this->render('home/index.html.twig');
 
     }
     /**
