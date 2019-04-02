@@ -42,11 +42,6 @@ class Reservation
     private $pointDePrise;
 
     /**
-     * @ORM\Column(type="string", length=255)
-     */
-    private $status;
-
-    /**
      * @ORM\Column(type="text", nullable=true)
      */
     private $commentaire;
@@ -140,18 +135,6 @@ class Reservation
     public function setPointDePrise(string $pointDePrise): self
     {
         $this->pointDePrise = $pointDePrise;
-
-        return $this;
-    }
-
-    public function getStatus(): ?string
-    {
-        return $this->status;
-    }
-
-    public function setStatus(string $status): self
-    {
-        $this->status = $status;
 
         return $this;
     }
