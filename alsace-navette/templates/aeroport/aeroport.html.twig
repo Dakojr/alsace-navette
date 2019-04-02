@@ -48,13 +48,16 @@
         </div>
 
         <div style="display: none;" id="FormAllerSimple">
-            <form class="needs-validation" novalidate>
-
+            <form class="needs-validation" name="formReservation" method="get" action="{{ path('reservationAller')}}" novalidate>
                 <div class="d-flex justify-content-center">
                     <div class="col-md-6 mb-3">
                         <div>
                             <label for="">Départ</label>
+<<<<<<< HEAD
                             <select class="form-control" style="text-align:center;" name="depart_aller" >
+=======
+                            <select class="form-control" style="text-align:center;" name="depart_aller">
+>>>>>>> amine/master
                                 <option value="1">Strasbourg</option>
                                 <option value="2">Bruxelle</option>
                                 <option value="3">3</option>
@@ -72,7 +75,11 @@
                     <div class="col-md-6 mb-3">
                         <div>
                             <label for="">Destination</label>
+<<<<<<< HEAD
                             <select class="form-control" name="destination_aller" required>
+=======
+                            <select class="form-control" name="destination_aller"required>
+>>>>>>> amine/master
                                 <option value="1">Strasbourg</option>
                                 <option value="2">2</option>
                                 <option value="3">3</option>
@@ -99,7 +106,11 @@
                     <div class="col-md-6 mb-3">
                         <div>
                             <label for="">Nombre de Passager</label>
+<<<<<<< HEAD
                             <select class="form-control" name="nb_passager_aller" required>
+=======
+                            <select class="form-control" id="nb_passager_aller" name="nb_passager_aller" required>
+>>>>>>> amine/master
                                 <option value="1">1</option>
                                 <option value="2">2</option>
                                 <option value="3">3</option>
@@ -133,7 +144,11 @@
                     <div class="col-md-6 mb-3">
                         <div class="form-group">
                             <label for="">Horaires de départ fixées par la société</label>
+<<<<<<< HEAD
                             <select class="form-control" name="horaires_depart_aller">
+=======
+                            <select class="form-control" name="horraire_depart_aller">
+>>>>>>> amine/master
                                 <option value="1">HEURE</option>
                                 <option value="2">2</option>
                                 <option value="3">3</option>
@@ -200,15 +215,21 @@
         </div>
 
         <div style="display: none;" id="FormAllerRetour">
-            <form class="needs-validation" novalidate>
+            <form class="needs-validation" method="get" action="{{ path('reservation')}}" novalidate>
 
                 <div class="d-flex justify-content-center">
                     <div class="col-md-6 mb-3">
                         <div>
                             <label for="">Départ</label>
+<<<<<<< HEAD
                             <select class="form-control" style="text-align:center;" name="depart">
                                 <option value="1">Strasbourg</option>
                                 <option value="2">Bruxelle</option>
+=======
+                            <select class="form-control" name="depart" style="text-align:center;">
+                                <option value="Strasbourg">Strasbourg</option>
+                                <option value="Bruxelle">Bruxelle</option>
+>>>>>>> amine/master
                                 <option value="3">3</option>
                                 <option value="4">4</option>
                                 <option value="5">5</option>
@@ -224,9 +245,15 @@
                     <div class="col-md-6 mb-3">
                         <div>
                             <label for="">Destination</label>
+<<<<<<< HEAD
                             <select class="form-control" name="destination" required>
                                 <option value="1">Strasbourg</option>
                                 <option value="2">2</option>
+=======
+                            <select class="form-control" name="destinaton" required>
+                                <option value="Strasbourg">Strasbourg</option>
+                                <option value="Bruxelle">Bruxelle0</option>
+>>>>>>> amine/master
                                 <option value="3">3</option>
                                 <option value="4">4</option>
                                 <option value="5">5</option>
@@ -270,7 +297,11 @@
                     <div class="col-md-4 mb-3">
                         <div>
                             <label for="">Nombre de Passager</label>
+<<<<<<< HEAD
                             <select class="form-control" value="pareil" name="nb_passager_2" required>
+=======
+                            <select class="form-control" name="nb_passager_2" value="pareil" required>
+>>>>>>> amine/master
                                 <option value="undefined">Pareil</option>
                                 <option value="1">1</option>
                                 <option value="2">2</option>
@@ -314,7 +345,11 @@
                     <div class="col-md-4 mb-3">
                         <div class="form-group">
                             <label for="">Horaires de départ fixées par la société</label>
+<<<<<<< HEAD
                             <select class="form-control" name="horaire_depart">
+=======
+                            <select class="form-control" name="horraire_depart">
+>>>>>>> amine/master
                                 <option value="1">HEURE</option>
                                 <option value="2">2</option>
                                 <option value="3">3</option>
@@ -332,7 +367,11 @@
                     <div class="col-md-4 mb-3">
                         <div class="form-group">
                             <label for="">Horaires de retour fixées par la société</label>
+<<<<<<< HEAD
                             <select class="form-control" name="horaire_retour">
+=======
+                            <select class="form-control" name="horraire_retour">
+>>>>>>> amine/master
                                 <option value="1">HEURE</option>
                                 <option value="2">2</option>
                                 <option value="3">3</option>

@@ -6,6 +6,8 @@
 /var/cache/*
 /var/log/*
 /vendor/
+/var/cache/*
+/var/log/*
 ###< symfony/framework-bundle ###
 
 ###> symfony/phpunit-bridge ###

@@ -101,6 +101,21 @@ class User Implements UserInterface
      */
     private $reservations;
 
+    /**
+     * @ORM\Column(type="string", length=255, nullable=true)
+     */
+    private $adresse;
+
+    /**
+     * @Assert\EqualTo(propertyPath="password", message="Vous avez mal confirmé votre mot de passe")
+     */
+    private $confirmPassword;
+
+    /**
+     * @ORM\Column(type="string", length=100, nullable=true)
+     */
+    private $pays;
+
     public function __construct()
     {
         $this->messages = new ArrayCollection();
@@ -347,5 +362,41 @@ class User Implements UserInterface
 
     public function getUsername(){
 
+    }
+
+    public function getAdresse(): ?string
+    {
+        return $this->adresse;
+    }
+
+    public function setAdresse(?string $adresse): self
+    {
+        $this->adresse = $adresse;
+
+        return $this;
+    }
+
+    public function getConfirmPassword(): ?string
+    {
+        return $this->confirmPassword;
+    }
+
+    public function setConfirmPassword(string $confirmPassword): self
+    {
+        $this->confirmPassword = $confirmPassword;
+
+        return $this;
+    }
+
+    public function getPays(): ?string
+    {
+        return $this->pays;
+    }
+
+    public function setPays(?string $pays): self
+    {
+        $this->pays = $pays;
+
+        return $this;
     }
 }
