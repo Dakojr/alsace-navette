@@ -37,7 +37,7 @@ class Reservation
     private $dateDepart;
 
     /**
-     * @ORM\Column(type="string", length=255)
+     * @ORM\Column(type="string", length=255, nullable=true)
      */
     private $pointDePrise;
 
@@ -67,6 +67,26 @@ class Reservation
      * @ORM\OneToOne(targetEntity="App\Entity\Facture", inversedBy="reservation", cascade={"persist", "remove"})
      */
     private $facture;
+
+    /**
+     * @ORM\Column(type="string", length=255, nullable=true)
+     */
+    private $adresse;
+
+    /**
+     * @ORM\Column(type="string", length=50, nullable=true)
+     */
+    private $codepostal;
+
+    /**
+     * @ORM\Column(type="string", length=100, nullable=true)
+     */
+    private $ville;
+
+    /**
+     * @ORM\Column(type="string", length=100, nullable=true)
+     */
+    private $pays;
 
     public function __construct()
     {
@@ -195,6 +215,54 @@ class Reservation
     public function setFacture(?facture $facture): self
     {
         $this->facture = $facture;
+
+        return $this;
+    }
+
+    public function getAdresse(): ?string
+    {
+        return $this->adresse;
+    }
+
+    public function setAdresse(?string $adresse): self
+    {
+        $this->adresse = $adresse;
+
+        return $this;
+    }
+
+    public function getCodepostal(): ?string
+    {
+        return $this->codepostal;
+    }
+
+    public function setCodepostal(?string $codepostal): self
+    {
+        $this->codepostal = $codepostal;
+
+        return $this;
+    }
+
+    public function getVille(): ?string
+    {
+        return $this->ville;
+    }
+
+    public function setVille(?string $ville): self
+    {
+        $this->ville = $ville;
+
+        return $this;
+    }
+
+    public function getPays(): ?string
+    {
+        return $this->pays;
+    }
+
+    public function setPays(?string $pays): self
+    {
+        $this->pays = $pays;
 
         return $this;
     }

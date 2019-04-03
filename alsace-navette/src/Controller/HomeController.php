@@ -4,6 +4,7 @@ namespace App\Controller;
 
 
 
+use App\Entity\Trajet;
 use App\Entity\Reservation;
 use App\Entity\DepartDestination;
 use Symfony\Component\HttpFoundation\Request;
@@ -28,8 +29,11 @@ class HomeController extends AbstractController
      */
     public function aeroportRoute()
     {
+        $repositoryLieux = $this->getDoctrine()->getRepository(Lieux::class);
+
+        $lieux = $repositoryLieux->findAll();
         return $this->render('aeroport/aeroport.html.twig', [
-            'controller_name' => 'HomeController',
+            'lieux' => $lieux,
         ]);
     }
 
@@ -59,19 +63,21 @@ class HomeController extends AbstractController
 
         $depart_destination = new DepartDestination();
         $reservation = new Reservation();
+        $trajet = new Trajet();
 
         $depart = $req->get('depart_aller');
         $destination = $req->get('destination_aller');
         $nb = $req->get('nb_passager_aller');
         $date_depart = new \DateTime($req->get('date_depart_aller'));
         $horraire_depart = $req->get('horraire_depart_aller');
-        $adresse = $req->get('adresse');
+        $adresse = $req->get('adresse_aller');
         $pdp = $req->get('pdp_aller');
         $cp = $req->get('cp_aller');
         $ville = $req->get('ville_aller');
         $pays = $req->get('pays_aller');
 
         
+
         $depart_destination->setDepart($depart);
         $depart_destination->setDestination($destination);
         
@@ -82,9 +88,17 @@ class HomeController extends AbstractController
         $reservation->setPointDePrise($pdp);
         $reservation->setUser($this->getUser());
         $reservation->setDepartDestination($depart_destination);
+        $reservation->setCodepostal($cp);
+        $reservation->setVille($ville);
+        $reservation->setPays($pays);
+        $reservation->setAdresse($adresse);
         
+        $trajet->addReservation($reservation);
+
+        $em->persist($trajet);
         $em->persist($depart_destination);
         $em->persist($reservation);
+
         $em->flush();
         
         return $this->render('home/index.html.twig');
@@ -95,62 +109,84 @@ class HomeController extends AbstractController
      */
     public function reservation(Request $req) : Response{
         $em = $this->getDoctrine()->getManager();
-        $depart_destination = new DepartDestination();
-        $reservation = new Reservation();
+        
+
 
         $depart = $req->get('depart');
-        $destination = $req->get('destination');
-        $date_depart = $req->get('date_depart');
+        $destination = $req->get('destinaton');
         
-        $nb_passager_aller = $req->get('nb_passager_1');
-        $nb_passager_retour = $req->get('nb_passager_2');
+        $nb_aller = $req->get('nb_passager_1');
+        $nb_retour = $req->get('nb_passager_2');
+        
+        if ($nb_retour == "undefined"){
+            $nb_retour = $nb_aller;
+        }
+        
+        $date_depart = new \DateTime($req->get('date_depart'));
+        $date_retour = new \DateTime($req->get('date_retour'));
+        
+        $horaire_depart = $req->get('horaire_depart');
+        $horaire_retour = $req->get('horaire_retour');
+        
         $pdp = $req->get('pdp');
-        
-        $date_depart = $req->get('date_depart');
-        $date_retour = $req->get('date_retour');
-        
-        $horraire_depart = $req->get('horaire_depart');
-        $horraire_retour = $req->get('horaire_retour');
+
         $adresse = $req->get('adresse');
         $cp = $req->get('cp');
         $ville = $req->get('ville');
         $pays = $req->get('pays');
 
         for ($i = 0; $i < 2; $i++){
+            $depart_destination = new DepartDestination();
+            $reservation = new Reservation();
+            $trajet = new Trajet();
+
             if (!isset($tmp)){
                 $depart_destination->setDepart($depart);
                 $depart_destination->setDestination($destination);
-
-                $reservation->setNbPassager($nb_passager_aller);
+                
+                
+                $reservation->setNbPassager($nb_aller);
                 $reservation->setDateDepart($date_depart);
-                $reservation->setHorraire($horraire_depart);
+                $reservation->setHorraire($horaire_depart);
+                $reservation->setPointDePrise($pdp);
                 $reservation->setUser($this->getUser());
                 $reservation->setDepartDestination($depart_destination);
-
+                $reservation->setCodepostal($cp);
+                $reservation->setVille($ville);
+                $reservation->setPays($pays);
+                $reservation->setAdresse($adresse);
+                
+                $trajet->addReservation($reservation);
+        
+                $em->persist($trajet);
                 $em->persist($depart_destination);
                 $em->persist($reservation);
-                $em->flush();
+        
 
                 $tmp = "ok";
             }
             else {
+                dump('its in else');
                 $depart_destination->setDepart($destination);
                 $depart_destination->setDestination($depart);
                 
-                $reservation->setNbPassager($nb_passager_retour);
+                $reservation->setNbPassager($nb_retour);
                 $reservation->setDateDepart($date_retour);
-                $reservation->setHorraire($horraire_retour);
+                $reservation->setHorraire($horaire_retour);
                 $reservation->setUser($this->getUser());
                 $reservation->setDepartDestination($depart_destination);
-
+                
+                $trajet->addReservation($reservation);
+        
+                $em->persist($trajet);
                 $em->persist($depart_destination);
                 $em->persist($reservation);
-                $em->flush();
+        
             }
 
         }
-
+        $em->flush();
         
-        return new Response($response);
+        return $this->render('home/index.html.twig');
     }
 }
