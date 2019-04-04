@@ -54,4 +54,33 @@ function DomicileAllerRetour() {
         domicile.style.display = "none";
 
     }
-}   
+}
+
+function PointdePrise() {
+    var depart = $('select[name=depart_aller]').val()
+    
+    var pointDePrise = document.getElementById('pointDePrise')
+
+    console.log(depart)
+
+    if(depart === "Strasbourg") {
+        pointDePrise.style.display = "block"
+    } else {
+        pointDePrise.style.display = "none"
+    }
+}
+
+function PointdePrise2() {
+    var depart = $('select[name=depart]').val()
+    
+    var pointDePrise = document.getElementById('pointDePrise2')
+
+    console.log(depart)
+
+    if(depart === "Strasbourg") {
+        pointDePrise.style.display = "block"
+    } else {
+        pointDePrise.style.display = "none"
+    }
+}
+

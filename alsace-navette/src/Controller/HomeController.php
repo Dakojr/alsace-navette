@@ -42,7 +42,6 @@ class HomeController extends AbstractController
             'controller_name' => 'HomeController',
         ]);
     }
-<<<<<<< HEAD
 
     /**
      * @Route("/infoDestination", name="infoDestination")
@@ -52,7 +51,6 @@ class HomeController extends AbstractController
         return $this->json(['username' => 'amine']);
     }
 
-=======
     /**
      * @Route("/reservationAller", name="reservationAller")
      */
@@ -151,5 +149,4 @@ class HomeController extends AbstractController
         
         return new Response($response);
     }
->>>>>>> amine/master
 }
