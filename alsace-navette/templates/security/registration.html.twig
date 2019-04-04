@@ -9,7 +9,6 @@
     {{ form_start(form) }}
 
     <div class="d-flex justify-content-center">
-
         <div class="d-flex justify-content-center">
             <div>
                 <label for="email" class="text-center col-12 mt-2">Civilité</label>
@@ -44,13 +43,32 @@
 
     <label for="password" class="text-center col-12 mt-2">Mot de Passe</label>
     {{ form_row(form.password, { 'attr' : { 'class': 'form-control' , 'placeholder':'Mot de passe...'} }) }}
-    <small id="defaultRegisterFormPasswordHelpBlock" class="form-text text-muted mb-4 text-center">
+    <small id="defaultRegisterFormPasswordHelpBlock" class="form-text text-muted text-center">
         Doit contenir 8 caractères
     </small>
 
-    <label for="email">Confirmation de mot de passe</label>
+    <label for="email" class="text-center col-12 mt-2">Confirmation de mot de passe</label>
+    {{ form_row(form.confirmPassword, { 'attr' : { 'class': 'form-control' , 'placeholder':'Confirmation de mot de passe...'} }) }}
 
-    <div class="form-row mb-4">
+    <hr>
+
+    
+
+    <div class="form-row mb-4 mt-2">
+        <div class="col">
+            <label for="email" >Adresse</label>
+    {{ form_row(form.adresse, { 'attr' : { 'class': 'form-control' , 'placeholder':'Adresse...'} }) }}
+        </div>
+        <div class="col">
+            <!-- Last name -->
+            <label for="prenom">Pays</label>
+            {{ form_row(form.pays, { 'attr' : { 'class': 'form-control' , 'placeholder':'Pays...'} }) }}
+
+        </div>
+    </div>
+
+    
+    <div class="form-row mb-4 mt-2">
         <div class="col">
             <!-- First name -->
             <label for="nom">Code Postal</label>
@@ -91,6 +109,5 @@
     </div>
     {{ form_end(form) }}
 </div>
-
 
 {% endblock %}
