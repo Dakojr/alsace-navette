@@ -48,13 +48,15 @@
         </div>
 
         <div style="display: none;" id="FormAllerSimple">
-            <form class="needs-validation" name="formReservation" method="get" action="{{ path('reservationAller')}}" novalidate>
+            <form class="needs-validation" name="formReservation" method="get" action="{{ path('reservationAller')}}"
+                novalidate>
                 <div class="d-flex justify-content-center">
                     <div class="col-md-6 mb-3">
                         <div>
                             <label for="">Départ</label>
-                            <select class="form-control" style="text-align:center;" name="depart_aller">
-                                <option value="1">Strasbourg</option>
+                            <select class="form-control" style="text-align:center;" name="depart_aller" onclick="PointdePrise()">
+                                <option value="">Choisir un point de prise</option>
+                                <option value="Strasbourg">Strasbourg</option>
                                 <option value="2">Bruxelle</option>
                                 <option value="3">3</option>
                                 <option value="4">4</option>
@@ -71,7 +73,7 @@
                     <div class="col-md-6 mb-3">
                         <div>
                             <label for="">Destination</label>
-                            <select class="form-control" name="destination_aller"required>
+                            <select class="form-control" name="destination_aller" required>
                                 <option value="1">Strasbourg</option>
                                 <option value="2">2</option>
                                 <option value="3">3</option>
@@ -148,10 +150,10 @@
                         </div>
                     </div>
                 </div>
-                <div class="d-flex justify-content-center">
+                <div class="d-flex justify-content-center" >
                     <div class="col-md-6 mb-3">
-                        <div class="form-group">
-                            <label for="">Point de prise</label>
+                        <div class="form-group" id="pointDePrise" style="display: none;">
+                            <label for="" >Point de prise</label>
                             <select class="form-control" name="pdp_aller" onclick="Domicile()" id="pdp">
                                 <option value="Gare central">Gare central</option>
                                 <option value="Palais des droits de l'Homme">Palais des droits de l'Homme</option>
@@ -166,19 +168,17 @@
                 </div>
 
 
-
-
                 <div class="d-flex justify-content-center">
 
 
                     <div id="domicile" class="col-md-6 mb-3" style="display: none;">
 
                         <label for="firstName">Adresse</label>
-                        <input type="text" class="form-control"  placeholder="Adresse ..." name="adresse_aller">
+                        <input type="text" class="form-control" placeholder="Adresse ..." name="adresse_aller">
                         <label for="firstName" class="mt-3">Code Postal</label>
                         <input type="text" class="form-control" placeholder="Code postal ..." name="cp_aller">
                         <label for="firstName" class="mt-3">Ville</label>
-                        <input type="text" class="form-control"  placeholder="Ville ..." name="ville_aller">
+                        <input type="text" class="form-control" placeholder="Ville ..." name="ville_aller">
                         <label for="firstName" class="mt-3">Pays</label>
                         <select class="form-control" name="pays_aller">
                             <option value="France">France</option>
@@ -205,7 +205,8 @@
                     <div class="col-md-6 mb-3">
                         <div>
                             <label for="">Départ</label>
-                            <select class="form-control" name="depart" style="text-align:center;">
+                            <select class="form-control" name="depart" style="text-align:center;" onclick="PointdePrise2()">
+                                <option value="">Choisir un point de prise</option>
                                 <option value="Strasbourg">Strasbourg</option>
                                 <option value="Bruxelle">Bruxelle</option>
                                 <option value="3">3</option>
@@ -313,7 +314,7 @@
                     <div class="col-md-4 mb-3">
                         <div class="form-group">
                             <label for="">Horaires de départ fixées par la société</label>
-                            <select class="form-control" name="horaire_depart">
+                            <select class="form-control" name="horraire_depart">
                                 <option value="1">HEURE</option>
                                 <option value="2">2</option>
                                 <option value="3">3</option>
@@ -331,7 +332,7 @@
                     <div class="col-md-4 mb-3">
                         <div class="form-group">
                             <label for="">Horaires de retour fixées par la société</label>
-                            <select class="form-control" name="horaire_retour">
+                            <select class="form-control" name="horraire_retour">
                                 <option value="1">HEURE</option>
                                 <option value="2">2</option>
                                 <option value="3">3</option>
@@ -345,56 +346,51 @@
                         <div class="invalid-feedback">
                             Please choose a number.
                         </div>
-                    </div>                    
+                    </div>
                 </div>
 
 
-
                 <div class="d-flex justify-content-center">
-                        <div class="col-md-6 mb-3">
-                            <div class="form-group">
-                                <label for="">Point de prise</label>
-                                <select class="form-control" name="pdp" onclick="DomicileAllerRetour()" id="pdp2">
-                                    <option value="Gare central">Gare central</option>
-                                    <option value="Palais des droits de l'Homme">Palais des droits de l'Homme</option>
-                                    <option value="Hotel Hilton">Hotel Hilton</option>
-                                    <option value="Domicile">Domicile</option>
-                                </select>
-                            </div>
-                            <div class="invalid-feedback">
-                                Please choose a number.
-                            </div>
-                        </div>
-                    </div>
-    
-    
-    
-    
-                    <div class="d-flex justify-content-center">
-    
-    
-                        <div id="domicile2" class="col-md-6 mb-3" style="display: none;">
-    
-                            <label for="firstName">Adresse</label>
-                            <input type="text" class="form-control" placeholder="Adresse..." name="adresse">
-                            <label for="firstName" class="mt-3">Code Postal</label>
-                            <input type="text" class="form-control"  placeholder="Ville..." name="cp">
-                            <label for="firstName" class="mt-3">Ville</label>
-                            <input type="text" class="form-control"  placeholder="Pays..." name="ville">
-                            <label for="firstName" class="mt-3">Pays</label>
-                            <select class="form-control" name="pays">
-                                <option value="France">France</option>
-                                <option value="Allemagne">Allemagne</option>
-                                <option value="Suisse">Suisse</option>
-                                <option value="4">4</option>
-                                <option value="5">5</option>
-                                <option value="6">6</option>
-                                <option value="7">7</option>
-                                <option value="8">8</option>
+                    <div class="col-md-6 mb-3">
+                        <div class="form-group" id="pointDePrise2" style="display: none;">
+                            <label for="">Point de prise</label>
+                            <select class="form-control" name="pdp" onclick="DomicileAllerRetour()" id="pdp2">
+                                <option value="Gare central">Gare central</option>
+                                <option value="Palais des droits de l'Homme">Palais des droits de l'Homme</option>
+                                <option value="Hotel Hilton">Hotel Hilton</option>
+                                <option value="Domicile">Domicile</option>
                             </select>
-    
+                        </div>
+                        <div class="invalid-feedback">
+                            Please choose a number.
                         </div>
                     </div>
+                </div>
+                <div class="d-flex justify-content-center">
+
+
+                    <div id="domicile2" class="col-md-6 mb-3" style="display: none;">
+
+                        <label for="firstName">Adresse</label>
+                        <input type="text" class="form-control" placeholder="Adresse..." name="adresse">
+                        <label for="firstName" class="mt-3">Code Postal</label>
+                        <input type="text" class="form-control" placeholder="Ville..." name="cp">
+                        <label for="firstName" class="mt-3">Ville</label>
+                        <input type="text" class="form-control" placeholder="Pays..." name="ville">
+                        <label for="firstName" class="mt-3">Pays</label>
+                        <select class="form-control" name="pays">
+                            <option value="France">France</option>
+                            <option value="Allemagne">Allemagne</option>
+                            <option value="Suisse">Suisse</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                            <option value="7">7</option>
+                            <option value="8">8</option>
+                        </select>
+
+                    </div>
+                </div>
                 <button class="btn btn-yellow" type="submit">Réserver !</button>
             </form>
         </div>
