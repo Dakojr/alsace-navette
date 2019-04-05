@@ -7,3 +7,7 @@ h1 {
     border: 10px dotted;
     border-color: #fcdd10;
 }
+
+#map {
+    height: 180px;
+}

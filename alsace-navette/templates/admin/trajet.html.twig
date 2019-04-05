@@ -1,0 +1,20 @@
+{% block body %}
+    {% for trajet in trajets %}
+            <label>Trajet numéro {{trajet.id}}</label>
+                {% for reservation in trajet.reservations %}
+            <select>
+                    <option>Numéro de client {{reservation.user.id}}</option>
+                    <option>nombre de passager {{reservation.nbPassager}}</option>
+                    <option>Numéro de telephone {{reservation.user.telportable}}</option>
+                    <option>horaire de depart {{reservation.horraire}}</option>
+                    <option>Point de prise {{reservation.pointDePrise}}</option>
+                    <option>Nombre identifiant de la reservation {{reservation.id}}</option>
+                    <option>date du jour de la reservation {{reservation.dateReservation|date("d/m/Y")}}</option>
+                    <option>date de depart {{reservation.dateDepart|date("d/m/Y")}}</option>
+            </select>
+                {% endfor %}
+            <br>
+    {% endfor %}
+{% endblock %}
+
+{# id/client/nbPassager/tel/vol/heure/pdp/commentaire/info, prix,est payé, opt annulation, a remboursé, date, detail du prix/ #}

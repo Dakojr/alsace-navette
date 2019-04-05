@@ -167,7 +167,6 @@ class HomeController extends AbstractController
                 $tmp = "ok";
             }
             else {
-                dump('its in else');
                 $depart_destination->setDepart($destination);
                 $depart_destination->setDestination($depart);
                 
