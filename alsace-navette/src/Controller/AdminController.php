@@ -23,6 +23,7 @@ class AdminController extends AbstractController
      */
     public function adminTrajet()
     {
+        
         $repositoryTrajet = $this->getDoctrine()->getRepository(Trajet::class);
         $trajets = $repositoryTrajet->findAll();
         return $this->render('admin/trajet.html.twig', [
