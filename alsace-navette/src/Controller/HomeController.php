@@ -70,7 +70,7 @@ class HomeController extends AbstractController
         $destination = $req->get('destination_aller');
         $nb = $req->get('nb_passager_aller');
         $date_depart = new \DateTime($req->get('date_depart_aller'));
-        $horraire_depart = $req->get('horraire_depart_aller');
+        $horraire_depart = $req->get('horaire_depart_aller');
         $adresse = $req->get('adresse_aller');
         $pdp = $req->get('pdp_aller');
         $cp = $req->get('cp_aller');
