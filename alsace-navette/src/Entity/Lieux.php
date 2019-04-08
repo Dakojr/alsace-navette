@@ -21,6 +21,11 @@ class Lieux
      */
     private $lieux;
 
+    /**
+     * @ORM\Column(type="boolean")
+     */
+    private $annexe;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -34,6 +39,18 @@ class Lieux
     public function setLieux(string $lieux): self
     {
         $this->lieux = $lieux;
+
+        return $this;
+    }
+
+    public function getAnnexe(): ?bool
+    {
+        return $this->annexe;
+    }
+
+    public function setAnnexe(bool $annexe): self
+    {
+        $this->annexe = $annexe;
 
         return $this;
     }
