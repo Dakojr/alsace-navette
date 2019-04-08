@@ -4,6 +4,8 @@ namespace App\Controller;
 
 use App\Entity\Trajet;
 use App\Entity\Reservation;
+use App\Form\ReservationType;
+use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Bridge\Doctrine\Form\Type\EntityType;
@@ -51,29 +53,20 @@ class AdminController extends AbstractController
     }
 
     /**
-     * @Route("/admin/trajetEdit/{id}", name="adminTrajetEdit")
+     * @Route("/admin/trajetEdit/{reservation}", name="adminTrajetEdit")
      */
-    public function edit($id){
+    public function edit(Request $request, Reservation $reservation){
         $em = $this->getDoctrine()->getManager();
-        $repositoryReservation = $this->getDoctrine()->getRepository(Reservation::class);
-
-        $reservation = $repositoryReservation->findBy(array('id' => $id));
         
-        $form = $this->createFormBuilder($reservation)
-            ->add('user', EntityType::class, [
-                'class' => 'App\Entity\User',
-                'placeholder' => 'choisissez un nouvel utilisateur',
-                'mapped' => 'false'
-            ])
-            ->add('dateDepart', DateType::class)
-            ->add('horraire')
-            ->add('pointDePrise', TextType::class, ['label' => 'Point de prise'])
-            ->add('commentaire', TextType::class, ['label' => 'Commentaire'])
-            ->getForm();
+        $form = $this->createForm(ReservationType::class, $reservation);
+        $form->handleRequest($request);
+        if ($form->isSubmitted() && $form->isValid()) {
 
+            $em->flush();
+            return $this->redirectToRoute('admin/trajet.html.twig');
+        }
         return $this->render('admin/trajetEdit.html.twig', [
-            'id' => $id,
-            'form' => $form
+            'form' => $form->createView()
         ]);
     }
 }
