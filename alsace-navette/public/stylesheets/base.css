@@ -79,8 +79,8 @@
   
   .overflow-hidden { overflow: hidden; }
 
-
-  .carousel-inner > .carousel-item > img {
-    width:640px;
-    height:360px;
+  #imgHome {
+    background-repeat:no-repeat;
+    width: 360;
+    height: 1905;
   }
