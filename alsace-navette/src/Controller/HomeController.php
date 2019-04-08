@@ -77,11 +77,8 @@ class HomeController extends AbstractController
         $ville = $req->get('ville_aller');
         $pays = $req->get('pays_aller');
 
-        
-
         $depart_destination->setDepart($depart);
         $depart_destination->setDestination($destination);
-        
         
         $reservation->setNbPassager($nb);
         $reservation->setDateDepart($date_depart);

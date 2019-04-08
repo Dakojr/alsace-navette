@@ -70,11 +70,18 @@
 
     {% endblock %}
 
+    <div class="d-flex justify-content-between">
+        <img src="images/image1.jpeg" alt="" >
+        <img src="images/image2.jpeg" alt="" >
+        <img src="images/image3.jpeg" alt="" >
+
+    </div>
+
     <div id="mapid"></div>
 
-    <footer class="container py-5">
-        <div class="row">
-            <div class="col-12 col-md">
+    <footer class="py-5">
+        <div class="d-flex justify-content-around">
+            <div class="">
                 <a class="nav-link" href="/"><img src="images/logo-alsace-navette.png" height="30" alt=""></a>
                 <title>Product</title>
                 <circle cx="12" cy="12" r="10" />
@@ -90,7 +97,7 @@
                     <li><a class="text-muted" href="#">Shopping Shuttle</a></li>
                 </ul>
             </div>
-            <div class="col-6 col-md">
+            <div class="">
                 <h5>Services annexes</h5>
                 <ul class="list-unstyled text-small">
                     <li><a class="text-muted" href="#">Laissez-vous conduire</a></li>
@@ -99,22 +106,16 @@
                     <li><a class="text-muted" href="#">Royal Palace</a></li>
                 </ul>
             </div>
-            <div class="col-6 col-md">
-                <h5>Resources</h5>
-                <ul class="list-unstyled text-small">
-                    <li><a class="text-muted" href="#">Business</a></li>
-                </ul>
-            </div>
-            <div class="col-6 col-md">
+            <div class="">
                 <h5>About</h5>
                 <ul class="list-unstyled text-small">
-                    <li><a class="text-muted" href="#">Contact</a></li>
+                    <li><a class="text-muted" href="#" data-toggle="modal" data-target="#qui">Qui sommes-nous ?</a></li>
                     <li><a class="text-muted" href="#">Mention légal</a></li>
                     <li><a class="text-muted" href="#">CGV</a></li>
                     <li><a class="text-muted" href="#" data-toggle="modal" data-target="#RGPD">RGPD</a></li>
                 </ul>
             </div>
-            <div class="col-6 col-md">
+            <div class="">
                 <h5>Social</h5>
                 <ul class="list-unstyled text-small">
                     <li><a class="text-muted" href="#"> <i class="fab fa-facebook-f fa-lg"></i> </a></li>
@@ -123,8 +124,6 @@
             </div>
         </div>
     </footer>
-
-
 
     <div class="modal fade" id="connexionModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
         aria-hidden="true">
@@ -165,7 +164,7 @@
         <div class="modal-dialog modal-dialog-centered" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Règlement général sur la protection des données,</h5>
+                    <h5 class="modal-title" id="exampleModalLabel">Règlement général sur la protection des données</h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
@@ -174,13 +173,14 @@
                     <p>Les informations recueillies par Alsace Navette font l‘objet d‘un traitement informatique dédié à
                         la gestion de vos réservations et à vous informer d‘éventuelles offres commerciales ou services
                         .</p>
-                        <p>Ces informations sont enregistrées dans des fichiers clients destinés au service administratif.</p>
+                    <p>Ces informations sont enregistrées dans des fichiers clients destinés au service administratif.
+                    </p>
 
-                        <p>Notre politique de confidentialité est mise en œuvre afin de vous donner le maximum de contrôle
+                    <p>Notre politique de confidentialité est mise en œuvre afin de vous donner le maximum de contrôle
                         sur vos données personnelles c‘est pourquoi Alsace navette s‘engage à ne transmettre aucune
                         information personnelle à des tiers.</p>
 
-                        <p>Vous pouvez demander à tout moment la modification ou suppression de vos données de notre base
+                    <p>Vous pouvez demander à tout moment la modification ou suppression de vos données de notre base
                         de données. Conformément à la loi « Informatique et Libertés » du 6 janvier 1976 modifiée en
                         2018 , le client jouit d‘un droit d‘accès, de modification, de rectification et de suppression
                         des données personnelles le concernant. Pour ce faire, vous pouvez vous adresser à notre service
@@ -194,9 +194,48 @@
         </div>
     </div>
 
+    <!-- Modal -->
+    <div class="modal fade" id="qui" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Qui sommes-nous ?</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p>Depuis 2004, notre association Franco-Iranienne s’engage à faciliter l’intégration sociale,
+                        économique, et citoyenne afin de privilégier les échanges entre les communautés.
+                        Acteur majeur dans l‘échange culturel en Alsace et plus particulièrement à Strasbourg, nous
+                        décidons de faciliter ces connexions en mettant en place un service de transport en navettes.
+                    </p>
+                    <p>Alsace Navette née en 2007 et est le 1er service de navette en France à intégrer la réservation
+                        et le paiement en ligne. Cette force d‘innovation a fait l‘objet de copie mais n‘a jamais été
+                        égalé.</p>
 
+                    <p>Gare, Aéroport ou autre lieu , Alsace Navette a pour mission d’assurer votre trajet entre votre
+                        domicile et la destination, dans les conditions de confort les plus optimales.
+                    </p>
 
+                    <p>Notre équipe travaille au quotidien pour vous offrir un service de mobilité adapté à vos besoins
+                        tant privés que professionnels tout en vous garantissant une sécurité.
+                    </p>
 
+                    <p>Nous sommes soucieux de vous fournir un service dont une qualité irréprochable car nous accordons
+                        une importance à votre bien-être.</p>
+
+                    <p>Les valeurs d’Alsace navette s’articulent sur l‘exigence d‘une économie sociale et solidaire et
+                        prône la rigueur, la qualité et surtout une attention particulière envers les requêtes de nos
+                        clients. Alors, confiez-nous votre trajet et Laissez-vous conduire !
+                    </p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-yellow" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <div id="editmodal"></div>
     {% block javascripts %}

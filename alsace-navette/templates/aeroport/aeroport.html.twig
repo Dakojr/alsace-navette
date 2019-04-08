@@ -48,211 +48,34 @@
         </div>
 
         <div style="display: none;" id="FormAllerSimple">
-                    <form class="needs-validation" name="formReservation" method="get" action="{{ path('reservationAller')}}"
-                          novalidate>
-                        <div class="d-flex justify-content-center">
-                            <div class="col-md-6 mb-3">
-                                <div>
-                                    <label for="">Départ</label>
-                                    <select class="form-control" style="text-align:center;" name="depart_aller" onclick="PointdePrise()">
-                                        <option value="">Choisir un point de prise</option>
-                                        <option value="Strasbourg">Strasbourg</option>
-                                        <option value="2">Bruxelle</option>
-                                        <option value="3">3</option>
-                                        <option value="4">4</option>
-                                        <option value="5">5</option>
-                                        <option value="6">6</option>
-                                        <option value="7">7</option>
-                                        <option value="8">8</option>
-                                    </select>
-                                    <div class="invalid-feedback">
-                                        Please choose a number.
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-6 mb-3">
-                                <div>
-                                    <label for="">Destination</label>
-                                    <select class="form-control" name="destination_aller" required>
-                                        <option value="1">Strasbourg</option>
-                                        <option value="2">2</option>
-                                        <option value="3">3</option>
-                                        <option value="4">4</option>
-                                        <option value="5">5</option>
-                                        <option value="6">6</option>
-                                        <option value="7">7</option>
-                                        <option value="8">8</option>
-                                    </select>
-                                    <div class="invalid-feedback">
-                                        Please choose a number.
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-
-                        <hr>
-
-                        <div>
-
-                        </div>
-                        <div class="d-flex justify-content-center">
-                            <div class="col-md-6 mb-3">
-                                <div>
-                                    <label for="">Nombre de Passager</label>
-                                    <select class="form-control" id="nb_passager_aller" name="nb_passager_aller" required>
-                                        <option value="1">1</option>
-                                        <option value="2">2</option>
-                                        <option value="3">3</option>
-                                        <option value="4">4</option>
-                                        <option value="5">5</option>
-                                        <option value="6">6</option>
-                                        <option value="7">7</option>
-                                        <option value="8">8</option>
-                                    </select>
-                                    <div class="invalid-feedback">
-                                        Please choose a number.
-                                    </div>
-                                </div>
-                            </div>
-
-                        </div>
-
-
-                        <div class="d-flex justify-content-center">
-                            <div class="col-md-6 mb-3">
-                                <div class="form-group">
-                                    <label for="">Date de départ</label>
-                                    <input type="date" class="form-control" name="date_depart_aller" required>
-                                </div>
-                                <div class="invalid-feedback">
-                                    Please choose a number.
-                                </div>
-                            </div>
-                        </div>
-                        <div class="d-flex justify-content-center">
-                            <div class="col-md-6 mb-3">
-                                <div class="form-group">
-                                    <label for="">Horaires de départ fixées par la société</label>
-                                    <select class="form-control" name="horraire_depart_aller">
-                                        <option value="1">HEURE</option>
-                                        <option value="2">2</option>
-                                        <option value="3">3</option>
-                                        <option value="4">4</option>
-                                        <option value="5">5</option>
-                                        <option value="6">6</option>
-                                        <option value="7">7</option>
-                                        <option value="8">8</option>
-                                    </select>
-                                </div>
-                                <div class="invalid-feedback">
-                                    Please choose a number.
-                                </div>
-                            </div>
-                        </div>
-                        <div class="d-flex justify-content-center" >
-                            <div class="col-md-6 mb-3">
-                                <div class="form-group" id="pointDePrise" style="display: none;">
-                                    <label for="" >Point de prise</label>
-                                    <select class="form-control" name="pdp_aller" onclick="Domicile()" id="pdp">
-                                        <option value="Gare central">Gare central</option>
-                                        <option value="Palais des droits de l'Homme">Palais des droits de l'Homme</option>
-                                        <option value="Hotel Hilton">Hotel Hilton</option>
-                                        <option value="Domicile">Domicile</option>
-                                    </select>
-                                </div>
-                                <div class="invalid-feedback">
-                                    Please choose a number.
-                                </div>
-                            </div>
-                        </div>
-
-
-                        <div class="d-flex justify-content-center">
-
-
-                            <div id="domicile" class="col-md-6 mb-3" style="display: none;">
-
-                                <label for="firstName">Adresse</label>
-                                <input type="text" class="form-control" placeholder="Adresse ..." name="adresse_aller">
-                                <label for="firstName" class="mt-3">Code Postal</label>
-                                <input type="text" class="form-control" placeholder="Code postal ..." name="cp_aller">
-                                <label for="firstName" class="mt-3">Ville</label>
-                                <input type="text" class="form-control" placeholder="Ville ..." name="ville_aller">
-                                <label for="firstName" class="mt-3">Pays</label>
-                                <select class="form-control" name="pays_aller">
-                                    <option value="France">France</option>
-                                    <option value="Allemagne">Allemagne</option>
-                                    <option value="Suisse">Suisse</option>
-                                    <option value="4">4</option>
-                                    <option value="5">5</option>
-                                    <option value="6">6</option>
-                                    <option value="7">7</option>
-                                    <option value="8">8</option>
-                                </select>
-
-                            </div>
-                        </div>
-
-                        <button class="btn btn-yellow" type="submit">Réserver !</button>
-                    </form>
-                </div>
-
-                <div style="display: none;" id="FormAllerRetour">
-                    <form class="needs-validation" method="get" action="{{ path('reservation')}}" novalidate>
-
-                        <div class="d-flex justify-content-center">
-                            <div class="col-md-6 mb-3">
-                                <div>
-                                    <label for="">Départ</label>
-                                    <select class="form-control" name="depart" style="text-align:center;" onclick="PointdePrise2()">
-                                        <option value="">Choisir un point de prise</option>
-                                        <option value="Strasbourg">Strasbourg</option>
-                                        <option value="Bruxelle">Bruxelle</option>
-                                        <option value="3">3</option>
-                                        <option value="4">4</option>
-                                        <option value="5">5</option>
-                                        <option value="6">6</option>
-                                        <option value="7">7</option>
-                                        <option value="8">8</option>
-                                    </select>
-                                    <div class="invalid-feedback">
-                                        Please choose a number.
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-6 mb-3">
-                                <div>
-                                    <label for="">Destination</label>
-                                    <select class="form-control" name="destinaton" required>
-                                        <option value="Strasbourg">Strasbourg</option>
-                                        <option value="Bruxelle">Bruxelle0</option>
-                                        <option value="3">3</option>
-                                        <option value="4">4</option>
-                                        <option value="5">5</option>
-                                        <option value="6">6</option>
-                                        <option value="7">7</option>
-                                        <option value="8">8</option>
-                                    </select>
-                                    <div class="invalid-feedback">
-                                        Please choose a number.
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-
-                        <hr>
-
-                        <div>
-
-                        </div>
+            <form class="needs-validation" name="formReservation" method="get" action="{{ path('reservationAller')}}"
+                novalidate>
                 <div class="d-flex justify-content-center">
-                    <div class="col-md-4 mb-3">
+                    <div class="col-md-6 mb-3">
                         <div>
-                            <label for="">Nombre de Passager</label>
-                            <select class="form-control" name="nb_passager_1" required>
-                                <option value="1">1</option>
+                            <label for="">Départ</label>
+                            <select class="form-control" style="text-align:center;" name="depart_aller"
+                                onclick="PointdePrise()">
+                                <option value="">Choisir un point de prise</option>
+                                <option value="Strasbourg">Strasbourg</option>
+                                <option value="2">Bruxelle</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                                <option value="7">7</option>
+                                <option value="8">8</option>
+                            </select>
+                            <div class="invalid-feedback">
+                                Please choose a number.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <div>
+                            <label for="">Destination</label>
+                            <select class="form-control" name="destination_aller" required>
+                                <option value="1">Strasbourg</option>
                                 <option value="2">2</option>
                                 <option value="3">3</option>
                                 <option value="4">4</option>
@@ -266,13 +89,45 @@
                             </div>
                         </div>
                     </div>
-                    <hr class="hr-vertical">
-                    <div class="col-md-4 mb-3">
-                        <div>
+                </div>
+
+
+                <hr>
+
+                <div>
+
+                </div>
+                <div class="d-flex justify-content-center">
+                    <div class="col-md-6 mb-3">
+                        <div class="form-group">
                             <label for="">Nombre de Passager</label>
-                            <select class="form-control" name="nb_passager_2" value="pareil" required>
-                                <option value="undefined">Pareil</option>
-                                <option value="1">1</option>
+                            <input type="number" class="form-control" placeholder="Nombre de passagger ..."
+                                name="nb_passager_aller">
+                        </div>
+                    </div>
+                </div>
+                <div class="invalid-feedback">
+                    Please choose a number.
+                </div>
+
+
+                <div class="d-flex justify-content-center">
+                    <div class="col-md-6 mb-3">
+                        <div class="form-group">
+                            <label for="">Date de départ</label>
+                            <input type="date" class="form-control" name="date_depart_aller" required>
+                        </div>
+                        <div class="invalid-feedback">
+                            Please choose a number.
+                        </div>
+                    </div>
+                </div>
+                <div class="d-flex justify-content-center">
+                    <div class="col-md-6 mb-3">
+                        <div class="form-group">
+                            <label for="">Horaires de départ fixées par la société</label>
+                            <select class="form-control" name="horaire_depart_aller">
+                                <option value="1">HEURE</option>
                                 <option value="2">2</option>
                                 <option value="3">3</option>
                                 <option value="4">4</option>
@@ -281,6 +136,141 @@
                                 <option value="7">7</option>
                                 <option value="8">8</option>
                             </select>
+                        </div>
+                        <div class="invalid-feedback">
+                            Please choose a number.
+                        </div>
+                    </div>
+                </div>
+                <div class="d-flex justify-content-center">
+                    <div class="col-md-6 mb-3">
+                        <div class="form-group" id="pointDePrise" style="display: none;">
+                            <label for="">Point de prise</label>
+                            <select class="form-control" name="pdp_aller" onclick="Domicile()" id="pdp">
+                                <option value="Gare central">Gare central</option>
+                                <option value="Palais des droits de l'Homme">Palais des droits de l'Homme</option>
+                                <option value="Hotel Hilton">Hotel Hilton</option>
+                                <option value="Domicile">Domicile</option>
+                            </select>
+                        </div>
+                        <div class="invalid-feedback">
+                            Please choose a number.
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="d-flex justify-content-center">
+
+
+                    <div id="domicile" class="col-md-6 mb-3" style="display: none;">
+
+                        <label for="firstName">Adresse</label>
+                        <input type="text" class="form-control" placeholder="Adresse ..." name="adresse_aller">
+                        <label for="firstName" class="mt-3">Code Postal</label>
+                        <input type="text" class="form-control" placeholder="Code postal ..." name="cp_aller">
+                        <label for="firstName" class="mt-3">Ville</label>
+                        <input type="text" class="form-control" placeholder="Ville ..." name="ville_aller">
+                        <label for="firstName" class="mt-3">Pays</label>
+                        <select class="form-control" name="pays_aller">
+                            <option value="France">France</option>
+                            <option value="Allemagne">Allemagne</option>
+                            <option value="Suisse">Suisse</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                            <option value="7">7</option>
+                            <option value="8">8</option>
+                        </select>
+
+                    </div>
+                </div>
+
+                <div class="d-flex justify-content-center">
+                    <div class="col-md-6 mb-3">
+                        <div class="form-group">
+                            <label for="firstName">Commentaire</label>
+                            <input type="text" class="form-control" placeholder="Commentaire ..."
+                                name="commentaire_aller">
+                        </div>
+                    </div>
+                </div>
+                {% if app.user %}
+                <button class="btn btn-yellow" type="submit">Réserver !</button>
+                {% else %}
+                <button class="btn btn-yellow" type="submit" disabled>Réserver !</button>
+                {% endif %}
+            </form>
+        </div>
+
+        <div style="display: none;" id="FormAllerRetour">
+            <form class="needs-validation" method="get" action="{{ path('reservation')}}" novalidate>
+
+                <div class="d-flex justify-content-center">
+                    <div class="col-md-6 mb-3">
+                        <div>
+                            <label for="">Départ</label>
+                            <select class="form-control" name="depart" style="text-align:center;"
+                                onclick="PointdePrise2()">
+                                <option value="">Choisir un point de prise</option>
+                                <option value="Strasbourg">Strasbourg</option>
+                                <option value="Bruxelle">Bruxelle</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                                <option value="7">7</option>
+                                <option value="8">8</option>
+                            </select>
+                            <div class="invalid-feedback">
+                                Please choose a number.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <div>
+                            <label for="">Destination</label>
+                            <select class="form-control" name="destinaton" required>
+                                <option value="Strasbourg">Strasbourg</option>
+                                <option value="Bruxelle">Bruxelle0</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                                <option value="7">7</option>
+                                <option value="8">8</option>
+                            </select>
+                            <div class="invalid-feedback">
+                                Please choose a number.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <hr>
+
+                <div>
+
+                </div>
+                <div class="d-flex justify-content-center">
+                    <div class="col-md-4 mb-3">
+
+                        <div class="form-group">
+                            <label for="">Nombre de Passager</label>
+                            <input type="number" class="form-control" placeholder="Nombre de passagger ..."
+                                name="nb_passager_1">
+
+                            <div class="invalid-feedback">
+                                Please choose a number.
+                            </div>
+                        </div>
+                    </div>
+                    <hr class="hr-vertical">
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <label for="">Nombre de Passager</label>
+                            <input type="number" class="form-control" placeholder="Nombre de passagger ..."
+                                name="nb_passager_2">
                             <div class="invalid-feedback">
                                 Please choose a number.
                             </div>
@@ -349,7 +339,6 @@
                     </div>
                 </div>
 
-
                 <div class="d-flex justify-content-center">
                     <div class="col-md-6 mb-3">
                         <div class="form-group" id="pointDePrise2" style="display: none;">
@@ -391,13 +380,25 @@
 
                     </div>
                 </div>
+
+                <div class="d-flex justify-content-center">
+                    <div class="col-md-6 mb-3">
+                        <div class="form-group">
+                            <label for="firstName">Commentaire</label>
+                            <input type="text" class="form-control" placeholder="Commentaire ..." name="commentaire">
+                        </div>
+                    </div>
+                </div>
+
+                {% if app.user %}
                 <button class="btn btn-yellow" type="submit">Réserver !</button>
+                {% else %}
+                <button class="btn btn-yellow" type="submit" disabled>Réserver !</button>
+                {% endif %}
+
             </form>
         </div>
-
     </div>
-
-
 
     <script>
         // Example starter JavaScript for disabling form submissions if there are invalid fields
@@ -419,7 +420,6 @@
             }, false);
         })();
     </script>
-</div>
 </div>
 
 
