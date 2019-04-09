@@ -35,52 +35,78 @@ function Domicile() {
 
     let strUser = $("#pdp :selected").val();
 
-    if(strUser === "Domicile") {
+    if (strUser === "Domicile") {
         domicile.style.display = "block";
     } else {
         domicile.style.display = "none";
 
     }
-}   
+}
 
 function DomicileAllerRetour() {
     var domicile = document.getElementById('domicile2')
 
     let strUser = $("#pdp2 :selected").val();
 
-    if(strUser === "Domicile") {
+    if (strUser === "Domicile") {
         domicile.style.display = "block";
     } else {
         domicile.style.display = "none";
-
     }
 }
 
 function PointdePrise() {
-    var depart = $('select[name=depart_aller]').val()
-    
-    var pointDePrise = document.getElementById('pointDePrise')
+    let depart = $('select[name=depart_aller]').val()
 
-    console.log(depart)
+    let destination = $('select[name=destination_aller]').val()
 
-    if(depart === "Strasbourg") {
+    let pointDePrise = document.getElementById('pointDePrise')
+
+    let btnsumbit = document.getElementById('btnsubmit')
+
+    if (depart === "Strasbourg" && destination === "Strasbourg") {
+        btnsumbit.disabled = true;
+    }
+
+    if(depart === "Strasbourg" && destination != "Strasbourg") {
+        btnsumbit.disabled = false;
+    }
+
+    if (depart === "Strasbourg") {
         pointDePrise.style.display = "block"
     } else {
         pointDePrise.style.display = "none"
+        $('select[name=destination_aller]').val("Strasbourg").change()
+        btnsumbit.disabled = false;
+
     }
 }
 
 function PointdePrise2() {
-    var depart = $('select[name=depart]').val()
-    
-    var pointDePrise = document.getElementById('pointDePrise2')
+    let depart = $('select[name=depart]').val()
 
-    console.log(depart)
+    let dest = $('select[name=destination]').val()
 
-    if(depart === "Strasbourg") {
+    let pointDePrise = document.getElementById('pointDePrise2')
+
+    console.log(dest)
+
+    var btnsumbit = document.getElementById('btnsubmit2')
+
+    if (depart === "Strasbourg" && dest === "Strasbourg") {
+        btnsumbit.disabled = true;
+    }
+    if(depart === "Strasbourg" && dest != "Strasbourg") {
+        btnsumbit.disabled = false;
+    }
+
+    if (depart === "Strasbourg") {
         pointDePrise.style.display = "block"
     } else {
         pointDePrise.style.display = "none"
+        $('select[name=destination]').val("Strasbourg").change()
+        btnsumbit.disabled = false;
+
     }
 }
 

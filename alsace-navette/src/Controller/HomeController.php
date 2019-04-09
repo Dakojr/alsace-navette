@@ -2,12 +2,11 @@
 
 namespace App\Controller;
 
-
-
 use App\Entity\Lieux;
 use App\Entity\Trajet;
 use App\Entity\Reservation;
 use App\Entity\DepartDestination;
+use App\Entity\User;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
@@ -44,6 +43,19 @@ class HomeController extends AbstractController
     public function aeroportRouteHorairesTarifs()
     {
         return $this->render('aeroport/horairesTarifs.html.twig', [
+            'controller_name' => 'HomeController',
+        ]);
+    }
+
+    /**
+     * @Route("/profile", name="profile")
+     */
+    public function Profile()
+    {
+        dump($this->getUser());
+
+        return $this->render('profile/profile.html.twig', [
+            'user' => $this->getUser(),
             'controller_name' => 'HomeController',
         ]);
     }
@@ -111,7 +123,7 @@ class HomeController extends AbstractController
 
 
         $depart = $req->get('depart');
-        $destination = $req->get('destinaton');
+        $destination = $req->get('destination');
         
         $nb_aller = $req->get('nb_passager_1');
         $nb_retour = $req->get('nb_passager_2');
