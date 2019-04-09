@@ -42,7 +42,8 @@ class SecurityController extends AbstractController
      * @Route("/login", name="security_login")
      */
     public function login(Request $request, AuthenticationUtils $authenticationUtils){
-        
+        $user = $this->getUser();
+        dump($user);
         $error = $authenticationUtils->getLastAuthenticationError();
         $lastUsername = $authenticationUtils->getLastUsername();
         $formLogin = $this->get('form.factory')

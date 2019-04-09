@@ -347,6 +347,10 @@ class User Implements UserInterface
     }
 
     public function getRoles(){
+        if($this->getNom() == 'admin'){
+            return [ 'ROLE_ADMIN'];
+        }
+
         return [ 
             'ROLE_USER'
         ];
@@ -399,6 +403,13 @@ class User Implements UserInterface
 
         return $this;
     }
+<<<<<<< HEAD
 
     
+=======
+    
+    public function __toString(){
+        return $this->nom;
+    }
+>>>>>>> amine/master
 }

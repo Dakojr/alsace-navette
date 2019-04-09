@@ -1,0 +1,64 @@
+easy_admin:
+    formats:
+        date: 'd/m/Y'
+    entities:
+      Trajet:
+        class: App\Entity\Trajet
+        label: 'Trajet'
+        list: 
+          title: "Récent trajet ajouté"
+          actions:
+            - {name: 'edit', icon: 'pencil', label: false, css_class: 'btn btn-secondary'}
+            - {name: 'delete', icon: 'trash', label: false, css_class: 'btn btn-danger'}       
+            - {name: 'new', label: 'Crée un nouveau trajet', css_class: 'btn btn-primary'}
+            - {name: 'search', label: 'Tapez votre recherche...'}
+      Lieux:
+        class: App\Entity\Lieux
+        label: 'Lieux'
+        list: 
+          title: "Lieux"
+          actions:
+            - {name: 'edit', icon: 'pencil', label: false, css_class: 'btn btn-secondary'}
+            - {name: 'delete', icon: 'trash', label: false, css_class: 'btn btn-danger'}       
+            - {name: 'new', label: 'Ajouter un nouveau lieux', css_class: 'btn btn-primary'}
+            - {name: 'search', label: 'Tapez votre recherche...'}
+      Utilisateur:
+        class: App\Entity\User
+        label: 'Utilisateur'
+        list: 
+          title: "Récent utilisateur ajouté"
+          actions:
+            - {name: 'edit', icon: 'pencil', label: false, css_class: 'btn btn-secondary'}
+            - {name: 'delete', icon: 'trash', label: false, css_class: 'btn btn-danger'}       
+            - {name: 'new', label: 'Crée un nouvel utilisateur', css_class: 'btn btn-primary'}
+            - {name: 'search', label: 'Tapez votre recherche...'}
+      Reservation:
+        class: App\Entity\Reservation
+        label: 'Reservations'
+        list: 
+          title: "Récente reservations effectuer"
+          actions:
+            - {name: 'edit', icon: 'pencil', label: false, css_class: 'btn btn-secondary'}
+            - {name: 'delete', icon: 'trash', label: false, css_class: 'btn btn-danger'}       
+            - {name: 'search', label: 'Tapez votre recherche...'}
+            - {name: 'new', label: 'Ajouter une nouvelle reservation', css_class: 'btn btn-primary'}
+      Vehicule:
+        class: App\Entity\Vehicule
+        label: 'Vehicules'
+        list: 
+          title: "Récent véhicules ajouté"
+          actions:
+            - {name: 'edit', icon: 'pencil', label: false, css_class: 'btn btn-secondary'}
+            - {name: 'delete', icon: 'trash', label: false, css_class: 'btn btn-danger'}       
+            - {name: 'search', label: 'Tapez votre recherche...'}
+            - {name: 'new', label: 'Ajouter un nouveau vehicule', css_class: 'btn btn-primary'}
+      Chauffeur:
+        class: App\Entity\Chauffeur
+        label: 'Chauffeurs'
+        list: 
+          title: "Récent chauffeur ajouté"
+          actions:
+            - {name: 'edit', icon: 'pencil', label: false, css_class: 'btn btn-secondary'}  
+            - {name: 'delete', icon: 'trash', label: false, css_class: 'btn btn-danger'}       
+            - {name: 'search', label: 'Tapez votre recherche...'}
+            - {name: 'new', label: 'Ajouter un nouveau chauffeur', css_class: 'btn btn-primary'}

@@ -54,4 +54,8 @@ class DepartDestination
 
         return $this;
     }
+
+    public function __toString(){
+        return $this->depart. " " . $this->destination;
+    }
 }

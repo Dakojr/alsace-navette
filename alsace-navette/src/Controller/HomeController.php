@@ -195,7 +195,6 @@ class HomeController extends AbstractController
 
         }
         $em->flush();
-        
         return $this->render('home/index.html.twig');
     }
 }
