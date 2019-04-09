@@ -266,4 +266,8 @@ class Reservation
 
         return $this;
     }
+
+    public function __toString(){
+        return "Reservation numéro " . $this->id;
+    }
 }

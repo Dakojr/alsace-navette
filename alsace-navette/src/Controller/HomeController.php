@@ -111,7 +111,7 @@ class HomeController extends AbstractController
 
 
         $depart = $req->get('depart');
-        $destination = $req->get('destinaton');
+        $destination = $req->get('destination');
         
         $nb_aller = $req->get('nb_passager_1');
         $nb_retour = $req->get('nb_passager_2');
@@ -183,7 +183,6 @@ class HomeController extends AbstractController
 
         }
         $em->flush();
-        
         return $this->render('home/index.html.twig');
     }
 }
