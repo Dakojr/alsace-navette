@@ -116,4 +116,8 @@ class Trajet
 
         return $this;
     }
+    
+    public function __toString(){
+        return "trajet numero " .$this->id;
+    }
 }
