@@ -27,6 +27,8 @@ class AppMobileController extends AbstractController
 
         $premierUser = $user->findPremsUser();
 
-        return $this->json(['user' => $premierUser]);
+        return new Response(
+            $this->json(['user' => $premierUser])
+        );
     }
 }
