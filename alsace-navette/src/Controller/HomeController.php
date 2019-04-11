@@ -52,8 +52,6 @@ class HomeController extends AbstractController
      */
     public function Profile()
     {
-        dump($this->getUser());
-
         return $this->render('profile/profile.html.twig', [
             'user' => $this->getUser(),
             'controller_name' => 'HomeController',

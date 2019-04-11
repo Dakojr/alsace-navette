@@ -110,3 +110,11 @@ function PointdePrise2() {
     }
 }
 
+function HeureAller() {
+    var heure_aller = document.getElementById('heure_aller')
+
+    console.log(heure_aller)
+
+    
+}
+
