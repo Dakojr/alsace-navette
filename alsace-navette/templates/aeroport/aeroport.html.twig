@@ -1,5 +1,4 @@
 {% extends 'base.html.twig' %}
-
 {% block head %}
 
 <meta charset="utf-8">
@@ -58,17 +57,13 @@
                                 onclick="PointdePrise()">
                                 <option value="">Choisir un point de prise</option>
                                 <option value="Strasbourg">Strasbourg</option>
-                                <option value="Bruxelle">Bruxelle</option>
-                                <option value="Entzheim">Entzheim</option>
-                                <option value="FrancfortH">Francfort (Hahn)</option>
-                                <option value="FrancfortM">Francfort Main</option>
-                                <option value="Karlsruhe">Karlsruhe</option>
-                                <option value="Luxembourg">Luxembourg</option>
-                                <option value="Paris">Paris Orly / Charles de Gaulle</option>
-                                <option value="Sarrebruck">Sarrebruck</option>
-                                <option value="Stuttgart">Stuttgart</option>
-                                <option value="Zurich">Zurich</option>
-                                <option value="Zweibrucken">Zweibrucken</option>
+                                <option value="2">Bruxelle</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                                <option value="7">7</option>
+                                <option value="8">8</option>
                             </select>
                             <div class="invalid-feedback">
                                 Please choose a number.
@@ -78,19 +73,15 @@
                     <div class="col-md-6 mb-3">
                         <div>
                             <label for="">Destination</label>
-                            <select class="form-control" name="destination_aller" onclick="PointdePrise()" required>
-                                <option value="Strasbourg">Strasbourg</option>
-                                <option value="Bruxelle">Bruxelle</option>
-                                <option value="Entzheim">Entzheim</option>
-                                <option value="FrancfortH">Francfort (Hahn)</option>
-                                <option value="FrancfortM">Francfort Main</option>
-                                <option value="Karlsruhe">Karlsruhe</option>
-                                <option value="Luxembourg">Luxembourg</option>
-                                <option value="Paris">Paris Orly / Charles de Gaulle</option>
-                                <option value="Sarrebruck">Sarrebruck</option>
-                                <option value="Stuttgart">Stuttgart</option>
-                                <option value="Zurich">Zurich</option>
-                                <option value="Zweibrucken">Zweibrucken</option>
+                            <select class="form-control" name="destination_aller" required>
+                                <option value="1">Strasbourg</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                                <option value="7">7</option>
+                                <option value="8">8</option>
                             </select>
                             <div class="invalid-feedback">
                                 Please choose a number.
@@ -204,7 +195,7 @@
                     </div>
                 </div>
                 {% if app.user %}
-                <button class="btn btn-yellow" type="submit" id="btnsubmit">Réserver !</button>
+                <button class="btn btn-yellow" type="submit">Réserver !</button>
                 {% else %}
                 <button class="btn btn-yellow" type="submit" disabled>Réserver !</button>
                 {% endif %}
@@ -223,16 +214,12 @@
                                 <option value="">Choisir un point de prise</option>
                                 <option value="Strasbourg">Strasbourg</option>
                                 <option value="Bruxelle">Bruxelle</option>
-                                <option value="Entzheim">Entzheim</option>
-                                <option value="FrancfortH">Francfort (Hahn)</option>
-                                <option value="FrancfortM">Francfort Main</option>
-                                <option value="Karlsruhe">Karlsruhe</option>
-                                <option value="Luxembourg">Luxembourg</option>
-                                <option value="Paris">Paris Orly / Charles de Gaulle</option>
-                                <option value="Sarrebruck">Sarrebruck</option>
-                                <option value="Stuttgart">Stuttgart</option>
-                                <option value="Zurich">Zurich</option>
-                                <option value="Zweibrucken">Zweibrucken</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                                <option value="7">7</option>
+                                <option value="8">8</option>
                             </select>
                             <div class="invalid-feedback">
                                 Please choose a number.
@@ -242,20 +229,15 @@
                     <div class="col-md-6 mb-3">
                         <div>
                             <label for="">Destination</label>
-                            <select class="form-control" name="destination" onclick="PointdePrise2()" required>
-                                <option value="">Choisir un point de prise</option>
+                            <select class="form-control" name="destination" required>
                                 <option value="Strasbourg">Strasbourg</option>
-                                <option value="Bruxelle">Bruxelle</option>
-                                <option value="Entzheim">Entzheim</option>
-                                <option value="FrancfortH">Francfort (Hahn)</option>
-                                <option value="FrancfortM">Francfort Main</option>
-                                <option value="Karlsruhe">Karlsruhe</option>
-                                <option value="Luxembourg">Luxembourg</option>
-                                <option value="Paris">Paris Orly / Charles de Gaulle</option>
-                                <option value="Sarrebruck">Sarrebruck</option>
-                                <option value="Stuttgart">Stuttgart</option>
-                                <option value="Zurich">Zurich</option>
-                                <option value="Zweibrucken">Zweibrucken</option>
+                                <option value="Bruxelle">Bruxelle0</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                                <option value="7">7</option>
+                                <option value="8">8</option>
                             </select>
                             <div class="invalid-feedback">
                                 Please choose a number.
@@ -408,9 +390,9 @@
                 </div>
 
                 {% if app.user %}
-                <button class="btn btn-yellow" type="submit" id="btnsubmit2">Réserver !</button>
+                <button class="btn btn-yellow" type="submit">Réserver !</button>
                 {% else %}
-                <button class="btn btn-yellow" type="submit" id="btnsubmit2" disabled>Réserver !</button>
+                <button class="btn btn-yellow" type="submit" disabled>Réserver !</button>
                 {% endif %}
 
             </form>

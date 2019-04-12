@@ -172,4 +172,8 @@ class Facture
 
         return $this;
     }
+    
+    public function __toString(){
+        return "Identifiant n°". $this->id;
+    }
 }
