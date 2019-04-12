@@ -4346,8 +4346,8 @@
     },
     {
         "name": "symfony/options-resolver",
-        "version": "v4.2.4",
-        "version_normalized": "4.2.4.0",
+        "version": "v4.2.5",
+        "version_normalized": "4.2.5.0",
         "source": {
             "type": "git",
             "url": "https://github.com/symfony/options-resolver.git",

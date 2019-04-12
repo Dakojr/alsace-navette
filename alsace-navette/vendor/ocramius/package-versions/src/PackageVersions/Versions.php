@@ -71,7 +71,7 @@ final class Versions
   'symfony/intl' => 'v4.2.4@b2af5ce379781fd4811f79746512fc1934333fbb',
   'symfony/monolog-bridge' => 'v4.2.4@2da647858fb9a13c425e6897c829c2ae97d9e5c3',
   'symfony/monolog-bundle' => 'v3.3.1@572e143afc03419a75ab002c80a2fd99299195ff',
-  'symfony/options-resolver' => 'v4.2.4@3896e5a7d06fd15fa4947694c8dcdd371ff147d1',
+  'symfony/options-resolver' => 'v4.2.5@3896e5a7d06fd15fa4947694c8dcdd371ff147d1',
   'symfony/orm-pack' => 'v1.0.6@36c2a928482dc5f05c5c1c1b947242ae03ff1335',
   'symfony/polyfill-intl-icu' => 'v1.10.0@f22a90256d577c7ef7efad8df1f0201663d57644',
   'symfony/polyfill-intl-idn' => 'v1.10.0@89de1d44f2c059b266f22c9cc9124ddc4cd0987a',
@@ -118,6 +118,7 @@ final class Versions
   'symfony/var-dumper' => 'v4.2.4@9f87189ac10b42edf7fb8edc846f1937c6d157cf',
   'symfony/web-profiler-bundle' => 'v4.2.4@30c2fa17ddb2bcea4f4c8cb56427a2374533115f',
   'symfony/web-server-bundle' => 'v4.2.4@d189cb4349d807df4c4fab932e2764d1fbe65c4f',
+<<<<<<< HEAD
   'paragonie/random_compat' => '2.*@521f8eccc5a76deab8e9c622173a66b62b9033e4',
   'symfony/polyfill-ctype' => '*@521f8eccc5a76deab8e9c622173a66b62b9033e4',
   'symfony/polyfill-iconv' => '*@521f8eccc5a76deab8e9c622173a66b62b9033e4',
@@ -125,6 +126,15 @@ final class Versions
   'symfony/polyfill-php70' => '*@521f8eccc5a76deab8e9c622173a66b62b9033e4',
   'symfony/polyfill-php56' => '*@521f8eccc5a76deab8e9c622173a66b62b9033e4',
   '__root__' => 'dev-master@521f8eccc5a76deab8e9c622173a66b62b9033e4',
+=======
+  'paragonie/random_compat' => '2.*@3ef82e26d05a154f8703918f6f21758d645a6c9b',
+  'symfony/polyfill-ctype' => '*@3ef82e26d05a154f8703918f6f21758d645a6c9b',
+  'symfony/polyfill-iconv' => '*@3ef82e26d05a154f8703918f6f21758d645a6c9b',
+  'symfony/polyfill-php71' => '*@3ef82e26d05a154f8703918f6f21758d645a6c9b',
+  'symfony/polyfill-php70' => '*@3ef82e26d05a154f8703918f6f21758d645a6c9b',
+  'symfony/polyfill-php56' => '*@3ef82e26d05a154f8703918f6f21758d645a6c9b',
+  '__root__' => 'dev-amine/master@3ef82e26d05a154f8703918f6f21758d645a6c9b',
+>>>>>>> amine/master
 );
 
     private function __construct()

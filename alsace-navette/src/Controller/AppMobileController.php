@@ -3,8 +3,9 @@
 namespace App\Controller;
 
 use App\Entity\User;
-use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\Routing\Annotation\Route;
+use Symfony\Component\HttpFoundation\JsonResponse;
+use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 
 class AppMobileController extends AbstractController
 {
@@ -26,9 +27,14 @@ class AppMobileController extends AbstractController
         $user = $this->getDoctrine()->getRepository(User::class);
 
         $premierUser = $user->findPremsUser();
+<<<<<<< HEAD
 
         return new Response(
             $this->json(['user' => $premierUser])
         );
+=======
+        
+        return new JsonResponse($premierUser);
+>>>>>>> amine/master
     }
 }
