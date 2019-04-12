@@ -27,14 +27,7 @@ class AppMobileController extends AbstractController
         $user = $this->getDoctrine()->getRepository(User::class);
 
         $premierUser = $user->findPremsUser();
-<<<<<<< HEAD
-
-        return new Response(
-            $this->json(['user' => $premierUser])
-        );
-=======
         
         return new JsonResponse($premierUser);
->>>>>>> amine/master
     }
 }
